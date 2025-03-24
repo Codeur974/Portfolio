@@ -1,0 +1,76 @@
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.homePageContent {
+  display: flex;
+  font-size: 1.2rem;
+  font-weight: 400;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #333;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0 20px;
+  text-align: center;
+  height: 89vh;
+  opacity: 0;
+  animation: fadeIn 2s ease-in-out forwards;
+  &__title {
+    margin: 0;
+    font-family: "Shrikhand", sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    animation: pulse 4s infinite;
+  }
+  &__outline {
+    color: transparent;
+    -webkit-text-stroke: 1px black;
+  }
+  &__description {
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-bottom: 20px;
+    animation: pulse 3s infinite;
+  }
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  &__links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    a {
+      display: flex;
+      align-items: center;
+      margin: 0 10px;
+      font-size: 1.2rem;
+      font-weight: 400;
+      color: #333;
+      text-decoration: none;
+      transition: color 0.3s;
+      &:hover {
+        color: #ff0059;
+      }
+      .icon {
+        margin-right: 8px;
+        font-size: 1.2rem;
+      }
+    }
+  }
+}

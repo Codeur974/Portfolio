@@ -1,0 +1,19 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  height: 100%;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body,
+html {
+  background: linear-gradient(45deg, #fff8e1, #fce4b6, #f8d9a7, #f5e6c8);
+  background-size: 300% 300%;
+  animation: shimmer 6s ease infinite;
+  height: 100%;
+  margin: 0;
+}
