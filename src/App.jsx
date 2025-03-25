@@ -4,8 +4,7 @@ import Home from "./pages/home/Home";
 import About from "./pages/about/About";
 import CV from "./pages/cv/CV";
 import Menu from "./pages/menu/Menu";
-import MyProject from "./pages/myproject/MyProject";
-import Myskills from "./pages/myskills/Myskills";
+import MyProject from "./pages/myProject/myProject";
 
 function App() {
   return (
@@ -18,7 +17,6 @@ function App() {
             <Route path="cv" element={<CV />} />
             <Route path="menu" element={<Menu />} />
             <Route path="myproject" element={<MyProject />} />
-            <Route path="myskills" element={<Myskills />} />
           </Route>
         </Routes>
       </Router>

@@ -9,11 +9,15 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-body,
-html {
+body {
+  display: flex;
+  flex-direction: column;
   background: linear-gradient(45deg, #fff8e1, #fce4b6, #f8d9a7, #f5e6c8);
   background-size: 300% 300%;
-  animation: shimmer 6s ease infinite;
-  height: 100%;
+  animation: shimmer 2s ease infinite;
   margin: 0;
+  height: 100%;
+}
+html {
+  height: auto;
 }
