@@ -1,0 +1,65 @@
+[
+  {
+    "id": "c67ab8a7",
+    "title": "Projet Booki",
+    "cover": "/images/p2.png",
+    "description": "Créez la page d'accueil d'une agence de voyage avec HTML & CSS.",
+    "repository": "https://github.com/Codeur974/booki-starter-code",
+    "link": "https://codeur974.github.io/booki-starter-code/"
+  },
+  {
+    "id": "c68ab8a9",
+    "title": "Projet Omyfood",
+    "cover": "/images/p4.png",
+    "description": "Améliorez l'interface d'un site mobile avec des animations CSS.",
+    "repository": "https://github.com/Codeur974/ohmyfood",
+    "link": "https://codeur974.github.io/ohmyfood/"
+  },
+  {
+    "id": "c57ab8a2",
+    "title": "Sophie Bluel",
+    "cover": "/images/p6.png",
+    "description": "Créez une page web dynamique avec JavaScript.",
+    "repository": "https://github.com/Codeur974/Portfolio-architecte-sophie-bluel",
+    "link": ""
+  },
+  {
+    "id": "c57ab2a7",
+    "title": "Nina Carducci",
+    "cover": "/images/p8.png",
+    "description": "Optimisez le référencement d'un site de photographe.",
+    "repository": "https://github.com/Codeur974/Nina-Carducci",
+    "link": ""
+  },
+  {
+    "id": "c62ab8a3",
+    "title": "724-Events",
+    "cover": "/images/p9.png",
+    "description": "Débuggez le site d'une agence d'événementiel.",
+    "repository": "https://github.com/Codeur974/724-Events",
+    "link": ""
+  },
+  {
+    "id": "c37ab9a7",
+    "title": "Argent Bank",
+    "cover": "/images/p10.png",
+    "description": "Implémentez le front-end d'une application bancaire avec React",
+    "repository": "https://github.com/Codeur974/ArgentBank",
+    "link": ""
+  },
+  {
+    "id": "skills",
+    "data": [
+      { "name": "HTML5", "color": "#E34F26", "icon": "FaHtml5" },
+      { "name": "CSS3", "color": "#1572B6", "icon": "FaCss3Alt" },
+      { "name": "JavaScript", "color": "#F7DF1E", "icon": "FaJs" },
+      { "name": "React", "color": "#61DAFB", "icon": "FaReact" },
+      { "name": "Node.js", "color": "#339933", "icon": "FaNodeJs" },
+      { "name": "Python", "color": "#3776AB", "icon": "FaPython" },
+      { "name": "Java", "color": "#007396", "icon": "FaJava" },
+      { "name": "PHP", "color": "#777BB4", "icon": "FaPhp" },
+      { "name": "Git", "color": "#F05032", "icon": "FaGitAlt" },
+      { "name": "Database", "color": "#4DB33D", "icon": "FaDatabase" }
+    ]
+  }
+]
