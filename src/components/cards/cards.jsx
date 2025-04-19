@@ -3,10 +3,12 @@ import api from "../../doc.json";
 import styles from "./card.module.scss";
 
 function Cards() {
+  const filteredApi = api.filter((itemCard) => itemCard.id !== "skills");
+
   return (
     <div>
       <ul className={styles.cards__container}>
-        {api.map((itemCard) => (
+        {filteredApi.map((itemCard) => (
           <Card itemCard={itemCard} key={itemCard.id} />
         ))}
       </ul>
