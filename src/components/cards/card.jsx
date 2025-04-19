@@ -16,11 +16,7 @@ function Card({ itemCard }) {
       <div className={styles.cardInner}>
         {/* Face avant */}
         <div className={styles.cardFront}>
-<<<<<<< HEAD
           <img src={`${itemCard.cover}`} alt={itemCard.title} />
-=======
-          <img src={itemCard.cover} alt={itemCard.title} />
->>>>>>> 3269212e35185ad3b55079673dff85d10dedde8a
           <h3>{itemCard.title}</h3>
         </div>
         {/* Face arrière */}

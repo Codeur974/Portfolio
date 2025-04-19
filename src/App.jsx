@@ -9,11 +9,7 @@ import MyProject from "./pages/myProject/myProject";
 function App() {
   return (
     <>
-<<<<<<< HEAD
       <Router basename="/Portfolio">
-=======
-      <Router>
->>>>>>> 3269212e35185ad3b55079673dff85d10dedde8a
         <Routes>
           <Route index element={<Home />} />
           <Route path="/" element={<Layaout />}>

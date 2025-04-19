@@ -1,9 +1,6 @@
 {
   "name": "portfolio",
-<<<<<<< HEAD
   "homepage": "https://codeur974.github.io/Portfolio",
-=======
->>>>>>> 3269212e35185ad3b55079673dff85d10dedde8a
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -13,11 +10,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
-<<<<<<< HEAD
     "deploy": "gh-pages -d dist -r https://github.com/Codeur974/Portfolio.git"
-=======
-    "deploy": "gh-pages -d dist"
->>>>>>> 3269212e35185ad3b55079673dff85d10dedde8a
   },
   "dependencies": {
     "react": "^19.0.0",
