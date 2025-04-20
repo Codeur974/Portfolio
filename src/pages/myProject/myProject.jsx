@@ -1,5 +1,5 @@
 import Cards from "../../components/cards/cards";
-import Skylls from "../../components/myskills/MySkills";
+import Skylls from "../../components/mySkills/MySkills";
 import styles from "./myproject.module.scss";
 
 function MyProject() {
