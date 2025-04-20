@@ -27,6 +27,7 @@
     font-size: 3rem;
     animation: moveSkill 10s infinite ease-in-out;
     pointer-events: none;
+    z-index: -1;
   }
 
   .skill:nth-child(1) {

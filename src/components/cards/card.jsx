@@ -16,7 +16,10 @@ function Card({ itemCard }) {
       <div className={styles.cardInner}>
         {/* Face avant */}
         <div className={styles.cardFront}>
-          <img src={`${itemCard.cover}`} alt={itemCard.title} />
+          <img
+            src={`${import.meta.env.BASE_URL}${itemCard.cover}`}
+            alt={itemCard.title}
+          />
           <h3>{itemCard.title}</h3>
         </div>
         {/* Face arrière */}

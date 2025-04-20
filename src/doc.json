@@ -55,9 +55,6 @@
       { "name": "JavaScript", "color": "#F7DF1E", "icon": "FaJs" },
       { "name": "React", "color": "#61DAFB", "icon": "FaReact" },
       { "name": "Node.js", "color": "#339933", "icon": "FaNodeJs" },
-      { "name": "Python", "color": "#3776AB", "icon": "FaPython" },
-      { "name": "Java", "color": "#007396", "icon": "FaJava" },
-      { "name": "PHP", "color": "#777BB4", "icon": "FaPhp" },
       { "name": "Git", "color": "#F05032", "icon": "FaGitAlt" },
       { "name": "Database", "color": "#4DB33D", "icon": "FaDatabase" }
     ]

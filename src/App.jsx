@@ -9,7 +9,7 @@ import MyProject from "./pages/myProject/myProject";
 function App() {
   return (
     <>
-      <Router basename="/Portfolio">
+      <Router basename="/Portfolio/">
         <Routes>
           <Route index element={<Home />} />
           <Route path="/" element={<Layaout />}>

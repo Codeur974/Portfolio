@@ -1,6 +1,6 @@
 import Cards from "../../components/cards/cards";
+import Skylls from "../../components/myskills/MySkills";
 import styles from "./myproject.module.scss";
-import Skylls from "../../components/myskills/Myskills";
 
 function MyProject() {
   const title = "Voici quelques projets que j'ai réalisé";

@@ -17,6 +17,7 @@ body {
   animation: shimmer 2s ease infinite;
   margin: 0;
   height: 100%;
+  padding: 20px;
 }
 html {
   height: auto;

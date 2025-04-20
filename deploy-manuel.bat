@@ -4,7 +4,15 @@ echo 🛠️  Build du projet...
 call npm run build
 
 echo 📄 Copie de index.html en 404.html (React Router)...
-copy dist\index.html dist\404.html
+if exist "dist\index.html" (
+  echo ✅ Le fichier index.html a été trouvé.
+  copy "dist\index.html" "dist\404.html"
+  echo ✅ Le fichier 404.html a été créé.
+) else (
+  echo ❌ Le fichier index.html est introuvable !
+  pause
+  exit /b
+)
 
 cd dist
 
@@ -26,5 +34,3 @@ rmdir /s /q dist\.git
 echo ✅ Déploiement terminé !
 echo 🌍 https://codeur974.github.io/Portfolio
 pause
-
-//cmd //c "E:\Portfolio\portfolio\deploy-manuel.bat"
