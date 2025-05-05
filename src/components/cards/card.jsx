@@ -1,5 +1,41 @@
 import { useState } from "react";
 import styles from "./card.module.scss";
+import {
+  FaHtml5,
+  FaCss3Alt,
+  FaJs,
+  FaReact,
+  FaNodeJs,
+  FaGitAlt,
+  FaDatabase,
+  FaFigma,
+  FaProjectDiagram,
+  FaTasks,
+  FaSearch,
+  FaChartLine,
+  FaSass,
+} from "react-icons/fa";
+
+import { SiRedux, SiJest, SiMongodb } from "react-icons/si";
+
+const icons = {
+  FaHtml5,
+  FaCss3Alt,
+  FaJs,
+  FaReact,
+  FaNodeJs,
+  FaGitAlt,
+  FaDatabase,
+  FaFigma,
+  FaProjectDiagram,
+  FaTasks,
+  FaSearch,
+  FaChartLine,
+  SiRedux,
+  SiJest,
+  SiMongodb,
+  FaSass,
+};
 
 function Card({ itemCard }) {
   const [isFlipped, setIsFlipped] = useState(false);
@@ -22,9 +58,24 @@ function Card({ itemCard }) {
           />
           <h3>{itemCard.title}</h3>
         </div>
-        {/* Face arrière */}
+
         <div className={styles.cardBack}>
           <p>{itemCard.description}</p>
+          <div className={styles.techIcons}>
+            {itemCard.technologies &&
+              itemCard.technologies.map((tech, index) => {
+                const IconComponent = icons[tech.icon];
+                return IconComponent ? (
+                  <span
+                    key={index}
+                    className={styles.icon}
+                    style={{ color: tech.color }}
+                  >
+                    <IconComponent />
+                  </span>
+                ) : null;
+              })}
+          </div>
           <div className={styles.links}>
             {itemCard.repository && (
               <a

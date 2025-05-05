@@ -1,49 +1,81 @@
-import data from "../../doc.json";
+import styles from "./MySkills.module.scss";
+import doc from "../../doc.json";
 import {
   FaHtml5,
   FaCss3Alt,
   FaJs,
   FaReact,
   FaNodeJs,
-  FaPython,
-  FaJava,
-  FaPhp,
   FaGitAlt,
   FaDatabase,
+  FaFigma,
+  FaProjectDiagram,
+  FaTasks,
+  FaSearch,
+  FaChartLine,
+  FaSass,
 } from "react-icons/fa";
-import styles from "./myskills.module.scss";
 
-function Skills() {
-  const skills = data.find((item) => item.id === "skills")?.data || [];
+import { SiRedux, SiJest, SiMongodb } from "react-icons/si";
+
+// Associe les noms des icônes aux composants React correspondants
+const icons = {
+  FaHtml5,
+  FaCss3Alt,
+  FaJs,
+  FaReact,
+  FaNodeJs,
+  FaGitAlt,
+  FaDatabase,
+  FaFigma,
+  FaProjectDiagram,
+  FaTasks,
+  FaSearch,
+  FaChartLine,
+  SiRedux,
+  SiJest,
+  SiMongodb,
+  FaSass,
+};
+
+function MySkills() {
+  const skillsData = doc.find((section) => section.id === "skills")?.data || [];
+
+  if (skillsData.length === 0) {
+    return <p>Aucune compétence disponible.</p>;
+  }
 
   return (
-    <div className={styles.skills}>
-      <h2>Mes Compétences</h2>
-      <div className={styles.skills__icons}>
-        {skills.map((skill, index) => {
-          const IconComponent = {
-            FaHtml5,
-            FaCss3Alt,
-            FaJs,
-            FaReact,
-            FaNodeJs,
-            FaPython,
-            FaJava,
-            FaPhp,
-            FaGitAlt,
-            FaDatabase,
-          }[skill.icon];
+    <div className={styles.skillsContainer}>
+      <div className={styles.categoryRing}>
+        {skillsData.map((category, index) => {
+          const angle = (360 / skillsData.length) * index;
           return (
             <div
-              className={styles.skill}
               key={index}
-              style={{ "--angle": `${index * (360 / skills.length)}` }}
+              className={styles.category}
+              style={{ "--angle": angle }}
             >
-              <div className={styles.icon}>
-                {IconComponent && (
-                  <IconComponent style={{ color: skill.color }} />
-                )}
-                <p className={styles.skillName}>{skill.name}</p>
+              <div className={styles.categoryCard}>
+                <div className={`${styles.cardFace} ${styles.cardFront}`}>
+                  <h2>{category.type}</h2>
+                  {category.skills.map((skill, i) => {
+                    const Icon = icons[skill.icon];
+                    if (!Icon) {
+                      console.error(`Icône manquante pour ${skill.name}`);
+                      return null;
+                    }
+                    return (
+                      <div key={i} className={styles.skill}>
+                        <Icon
+                          className={styles.icon}
+                          style={{ color: skill.color }}
+                        />
+                        <span className={styles.skillName}>{skill.name}</span>
+                      </div>
+                    );
+                  })}
+                </div>
               </div>
             </div>
           );
@@ -53,4 +85,4 @@ function Skills() {
   );
 }
 
-export default Skills;
+export default MySkills;

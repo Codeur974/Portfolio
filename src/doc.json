@@ -3,60 +3,120 @@
     "id": "c67ab8a7",
     "title": "Projet Booki",
     "cover": "/images/p2.png",
-    "description": "Créez la page d'accueil d'une agence de voyage avec HTML & CSS.",
+    "description": "L’entreprise souhaite développer un site Internet qui permette aux usagers de trouver des hébergements et des activités dans la ville de leur choix. Une maquette a été fourni pour l'intégration du site. ",
     "repository": "https://github.com/Codeur974/booki-starter-code",
-    "link": "https://codeur974.github.io/booki-starter-code/"
+    "link": "https://codeur974.github.io/booki-starter-code/",
+    "technologies": [
+      { "name": "HTML5", "icon": "FaHtml5", "color": "#E34F26" },
+      { "name": "CSS3", "icon": "FaCss3Alt", "color": "#1572B6" }
+    ]
   },
   {
     "id": "c68ab8a9",
     "title": "Projet Omyfood",
     "cover": "/images/p4.png",
-    "description": "Améliorez l'interface d'un site mobile avec des animations CSS.",
+    "description": "Ma mission ici était de développer un site “mobile first” qui répertorie les menus de restaurants gastronomiques. Les clients pourront composer le menu de leur repas pour que les plats soient prêts à leur arrivée.",
     "repository": "https://github.com/Codeur974/ohmyfood",
-    "link": "https://codeur974.github.io/ohmyfood/"
+    "link": "https://codeur974.github.io/ohmyfood/",
+    "technologies": [
+      { "name": "HTML5", "icon": "FaHtml5", "color": "#E34F26" },
+      { "name": "CSS3", "icon": "FaCss3Alt", "color": "#1572B6" },
+      { "name": "Sass", "color": "#CC6699", "icon": "FaSass" }
+    ]
   },
   {
     "id": "c57ab8a2",
     "title": "Sophie Bluel",
     "cover": "/images/p6.png",
-    "description": "Créez une page web dynamique avec JavaScript.",
+    "description": "Je devais créer un portefolio pour une architecte d'intérieur, ou je devais créer la page de connection et la page qui permettait a l'administratrice de gérer l'ajout et la supression de ses projets.",
     "repository": "https://github.com/Codeur974/Portfolio-architecte-sophie-bluel",
-    "link": ""
+    "link": "",
+    "technologies": [
+      { "name": "HTML5", "icon": "FaHtml5", "color": "#E34F26" },
+      { "name": "CSS3", "icon": "FaCss3Alt", "color": "#1572B6" },
+      { "name": "JavaScript", "color": "#F7DF1E", "icon": "FaJs" }
+    ]
   },
   {
     "id": "c57ab2a7",
     "title": "Nina Carducci",
     "cover": "/images/p8.png",
-    "description": "Optimisez le référencement d'un site de photographe.",
+    "description": "Optimisation du référencement d'un site de photographe, en metant en place un référencement local,en ajoutant des meta-donnés pour les reseau sociaux et faire une optimisation global du site.",
     "repository": "https://github.com/Codeur974/Nina-Carducci",
-    "link": ""
+    "link": "",
+    "technologies": [
+      { "name": "SEO", "color": "#4CAF50", "icon": "FaSearch" },
+      { "name": "Optimisation", "color": "#FFC300", "icon": "FaChartLine" },
+      { "name": "JavaScript", "color": "#F7DF1E", "icon": "FaJs" }
+    ]
   },
   {
     "id": "c62ab8a3",
     "title": "724-Events",
     "cover": "/images/p9.png",
-    "description": "Débuggez le site d'une agence d'événementiel.",
+    "description": "Débuggez le site d'une agence d'événementiel grâce à une série de tests unitaires et d'intégration. Vous devrez également corriger les erreurs de code.",
     "repository": "https://github.com/Codeur974/724-Events",
-    "link": ""
+    "link": "",
+    "technologies": [
+      { "name": "Jest", "color": "#C21325", "icon": "SiJest" },
+      { "name": "CSS3", "icon": "FaCss3Alt", "color": "#1572B6" },
+      { "name": "JavaScript", "color": "#F7DF1E", "icon": "FaJs" }
+    ]
   },
   {
     "id": "c37ab9a7",
     "title": "Argent Bank",
     "cover": "/images/p10.png",
-    "description": "Implémentez le front-end d'une application bancaire avec React",
+    "description": "Ma mission était d'intégrer le front-end avec le back-end via des appels API.Vous écrirez des appels à l'API REST pour connecter les deux parties de l'application, assurant une communication fluide entre le client et le serveur.",
     "repository": "https://github.com/Codeur974/ArgentBank",
-    "link": ""
+    "link": "",
+    "technologies": [
+      { "name": "HTML5", "icon": "FaHtml5", "color": "#E34F26" },
+      { "name": "CSS3", "icon": "FaCss3Alt", "color": "#1572B6" },
+      { "name": "Sass", "color": "#CC6699", "icon": "FaSass" },
+      { "name": "React", "color": "#61DAFB", "icon": "FaReact" },
+      { "name": "Node.js", "color": "#339933", "icon": "FaNodeJs" },
+      { "name": "Redux", "color": "#764ABC", "icon": "SiRedux" }
+    ]
   },
   {
     "id": "skills",
     "data": [
-      { "name": "HTML5", "color": "#E34F26", "icon": "FaHtml5" },
-      { "name": "CSS3", "color": "#1572B6", "icon": "FaCss3Alt" },
-      { "name": "JavaScript", "color": "#F7DF1E", "icon": "FaJs" },
-      { "name": "React", "color": "#61DAFB", "icon": "FaReact" },
-      { "name": "Node.js", "color": "#339933", "icon": "FaNodeJs" },
-      { "name": "Git", "color": "#F05032", "icon": "FaGitAlt" },
-      { "name": "Database", "color": "#4DB33D", "icon": "FaDatabase" }
+      {
+        "type": "languages",
+        "skills": [
+          { "name": "HTML5", "color": "#E34F26", "icon": "FaHtml5" },
+          { "name": "CSS3", "color": "#1572B6", "icon": "FaCss3Alt" },
+          { "name": "JavaScript", "color": "#F7DF1E", "icon": "FaJs" },
+          { "name": "Sass", "color": "#CC6699", "icon": "FaSass" }
+        ]
+      },
+      {
+        "type": "framework",
+        "skills": [
+          { "name": "React", "color": "#61DAFB", "icon": "FaReact" },
+          { "name": "Node.js", "color": "#339933", "icon": "FaNodeJs" },
+          { "name": "Redux", "color": "#764ABC", "icon": "SiRedux" },
+          { "name": "Jest", "color": "#C21325", "icon": "SiJest" }
+        ]
+      },
+      {
+        "type": "Outils",
+        "skills": [
+          { "name": "Git", "color": "#F05032", "icon": "FaGitAlt" },
+          { "name": "Figma", "color": "#F24E1E", "icon": "FaFigma" },
+          { "name": "MongoDB", "color": "#4DB33D", "icon": "SiMongodb" }
+        ]
+      },
+      {
+        "type": "Methodologies",
+        "skills": [
+          { "name": "Agile", "color": "#FF5733", "icon": "FaProjectDiagram" },
+          { "name": "Scrum", "color": "#C70039", "icon": "FaTasks" },
+          { "name": "SEO", "color": "#4CAF50", "icon": "FaSearch" },
+          { "name": "Optimisation", "color": "#FFC300", "icon": "FaChartLine" }
+        ]
+      }
     ]
   }
 ]

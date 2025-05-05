@@ -5,7 +5,7 @@ function Intro() {
   return (
     <div className={styles.intro}>
       <img src={Logo} alt="logo" className={styles.logo} />
-      <h1 className={styles.intro__title}>Bienvenu sur mon portfolio</h1>
+      <h1 className={styles.intro__title}>Bienvenue sur mon portfolio</h1>
     </div>
   );
 }

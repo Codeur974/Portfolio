@@ -1,73 +1,109 @@
-.skills {
+.skillsContainer {
   text-align: center;
-  margin: 40px auto;
+  margin: 20px auto;
+}
 
-  h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
+.categoryRing {
+  position: relative;
+  width: 280px;
+  height: 200px;
+  margin: 30px auto;
+  perspective: 1500px;
+  transform-style: preserve-3d;
+
+  @media (max-width: 768px) {
+    perspective: none;
+    transform-style: flat;
+    display: grid; /* Utilisation de grid */
+    grid-template-columns: repeat(2, 1fr); /* 2 colonnes */
+    gap: 20px; /* Espacement entre les colonnes et les lignes */
+    justify-content: center; /* Centrer les colonnes */
   }
+}
 
-  &__icons {
+.category {
+  position: absolute;
+  top: 30%;
+  left: 100%;
+  transform-origin: -200px 0;
+  transform: rotateY(calc(var(--angle) * 1deg)) translateX(200px);
+  animation: rotateGroup 15s linear infinite;
+  margin: 10px;
+
+  .categoryCard {
     position: relative;
-    width: 300px;
-    height: 150px;
-    margin: 0 auto;
-    padding-bottom: 40px;
-    border-radius: 50%;
-    perspective: 800px;
+    background: white;
+    border-radius: 10px;
+    padding: 8px;
+    width: 120px;
+    height: 140px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
     transform-style: preserve-3d;
-    box-sizing: border-box;
-    @media (max-width: 768px) {
+    transition: transform 0.6s ease-in-out;
+
+    .cardFace {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
       display: flex;
-      flex-wrap: wrap;
+      flex-direction: column;
+      align-items: center;
       justify-content: center;
-      padding: 0 20px;
-      gap: 20px;
+      border-radius: 10px;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+
+    h2 {
+      font-size: 0.9rem;
+      margin-bottom: 8px;
     }
 
     .skill {
-      position: absolute;
-      top: 50%;
-      left: 100%;
-      transform-origin: -150px 0;
-      transform: rotateY(calc(var(--angle) * 1deg)) translateX(150px);
-      animation: rotateAroundAxis 5s linear infinite;
-      @media (max-width: 768px) {
-        position: static;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      margin: 4px 0;
+
+      .icon {
+        font-size: 1.2rem;
+      }
+
+      .skillName {
+        font-size: 0.75rem;
+        color: #333;
+        text-align: center;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    position: static;
+    transform: none;
+    animation: none;
+
+    .categoryCard {
+      margin-bottom: 20px;
+      transform: none;
+
+      .cardFace {
+        position: relative;
         transform: none;
-        animation: none;
-      }
-    }
-
-    .icon {
-      font-size: 4rem;
-      transition: transform 0.3s ease;
-      @media (max-width: 768px) {
-        font-size: 1rem;
-      }
-
-      &:hover {
-        transform: scale(1.2);
-      }
-    }
-    .skillName {
-      margin-top: 10px;
-      font-size: 0.8rem;
-      color: #333;
-      @media (max-width: 768px) {
-        font-size: 0.8rem;
       }
     }
   }
 }
 
-@keyframes rotateAroundAxis {
+@keyframes rotateGroup {
   0% {
-    transform: rotateY(calc(var(--angle) * 1deg)) translateX(150px)
+    transform: rotateY(calc(var(--angle) * 1deg)) translateX(200px)
       rotateY(0deg);
   }
   100% {
-    transform: rotateY(calc(var(--angle) * 1deg)) translateX(150px)
+    transform: rotateY(calc(var(--angle) * 1deg)) translateX(200px)
       rotateY(360deg);
   }
 }

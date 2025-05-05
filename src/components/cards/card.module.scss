@@ -4,7 +4,8 @@
   margin: 8rem auto;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 30px;
+  gap: 130px 30px;
+
   padding: 0;
   @media (max-width: 1350px) {
     grid-template-columns: repeat(4, 1fr);
@@ -15,7 +16,8 @@
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
     margin-bottom: 20px;
-    gap: 40px;
+    gap: 50px;
+    margin-top: 14rem;
   }
 }
 
@@ -31,7 +33,9 @@
   perspective: 1000px;
   cursor: pointer;
   transition: transform 0.5s ease, box-shadow 0.5s ease;
-
+  &.flipped {
+    z-index: 10; /* Place la carte au-dessus des autres */
+  }
   &:hover {
     transform: scale(1.05);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
@@ -52,7 +56,6 @@
   .cardBack {
     position: absolute;
     width: 100%;
-
     backface-visibility: hidden;
     display: flex;
     flex-direction: column;
@@ -75,7 +78,6 @@
     align-items: center;
     padding: 20px;
     box-sizing: border-box;
-    margin-top: 25%;
 
     .links {
       margin-top: 10px;
@@ -92,6 +94,22 @@
 
       &:hover {
         color: #0056b3;
+      }
+    }
+  }
+  .techIcons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    .icon {
+      font-size: 1.5rem; /* Taille des icônes */
+      color: #333; /* Couleur par défaut */
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: #007bff; /* Couleur au survol */
       }
     }
   }

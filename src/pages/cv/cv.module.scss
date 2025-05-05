@@ -1,0 +1,35 @@
+.cvSection {
+  margin-bottom: 2rem;
+  height: 79vh;
+
+  h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #2c3e50;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 0.5rem;
+  }
+
+  ul {
+    margin: 40px auto;
+    max-width: 1000px;
+    margin-top: 50px;
+    list-style: disc;
+    padding-left: 1.5rem;
+
+    li {
+      font-size: 2rem;
+      margin-bottom: 0.75rem;
+      line-height: 1.6;
+      color: #34495e;
+      @media (max-width: 768px) {
+        font-size: 1rem;
+      }
+
+      strong {
+        color: #2980b9;
+      }
+    }
+  }
+}

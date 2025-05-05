@@ -7,56 +7,68 @@ import {
   FaJs,
   FaReact,
   FaNodeJs,
-  FaPython,
-  FaJava,
-  FaPhp,
   FaGitAlt,
   FaDatabase,
+  FaFigma,
+  FaProjectDiagram,
+  FaTasks,
+  FaSearch,
+  FaChartLine,
   FaEnvelope,
   FaGithub,
   FaLinkedin,
+  FaSass,
 } from "react-icons/fa";
+
+import { SiRedux, SiJest, SiMongodb } from "react-icons/si";
 
 // Associe les noms des icônes aux composants React correspondants
 const icons = {
-  FaHtml5: FaHtml5,
-  FaCss3Alt: FaCss3Alt,
-  FaJs: FaJs,
-  FaReact: FaReact,
-  FaNodeJs: FaNodeJs,
-  FaPython: FaPython,
-  FaJava: FaJava,
-  FaPhp: FaPhp,
-  FaGitAlt: FaGitAlt,
-  FaDatabase: FaDatabase,
+  FaHtml5,
+  FaCss3Alt,
+  FaJs,
+  FaReact,
+  FaNodeJs,
+  FaGitAlt,
+  FaDatabase,
+  FaFigma,
+  FaProjectDiagram,
+  FaTasks,
+  FaSearch,
+  FaChartLine,
+  SiRedux,
+  SiJest,
+  SiMongodb,
+  FaSass,
 };
 
 function MenuContent() {
   // Récupère uniquement la section "skills" du fichier JSON
-  const skills = doc.find((section) => section.id === "skills")?.data || [];
+  const skillsData = doc.find((section) => section.id === "skills")?.data || [];
 
   return (
     <div className={styles.menu}>
-      {/* Affichage dynamique des compétences */}
-      {skills.map((skill, index) => {
-        const IconComponent = icons[skill.icon]; // Récupère le composant d'icône correspondant
-        return (
-          <div
-            key={index}
-            className={styles.skill}
-            style={{ color: skill.color }}
-          >
-            <IconComponent />
-          </div>
-        );
-      })}
+      {/* Affichage des icônes avec animation et couleurs dynamiques */}
+      {skillsData.map((category, index) =>
+        category.skills.map((skill, i) => {
+          const IconComponent = icons[skill.icon]; // Récupère l'icône pour chaque compétence
+          return IconComponent ? (
+            <div
+              key={`${index}-${i}`}
+              className={`${styles.skill} skill-${i + 1}`}
+            >
+              <IconComponent style={{ color: skill.color }} />
+            </div>
+          ) : null;
+        })
+      )}
 
       {/* Liens de navigation */}
       <Link to="/">
-        <p>Acceuil</p>
+        <p>Accueil</p>
       </Link>
       <Link to="/about">
-        <p>A propos de moi</p>
+        <p>À propos de moi</p>
       </Link>
       <Link to="/myproject">
         <p>Mes Projets</p>
