@@ -63,7 +63,6 @@ function MenuContent() {
         })
       )}
 
-      {/* Liens de navigation */}
       <Link to="/">
         <p>Accueil</p>
       </Link>
@@ -73,11 +72,10 @@ function MenuContent() {
       <Link to="/myproject">
         <p>Mes Projets</p>
       </Link>
-      <Link to="/cv">
-        <p>Mon CV</p>
+      <Link to="/formation">
+        <p>Formations</p>
       </Link>
 
-      {/* Liens sociaux */}
       <div className={styles.socials}>
         <a
           href="mailto:eric.sermande@gmail.com"

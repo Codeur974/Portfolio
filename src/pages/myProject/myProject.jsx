@@ -1,14 +1,19 @@
 import Cards from "../../components/cards/cards";
 import Skylls from "../../components/mySkills/MySkills";
 import styles from "./myproject.module.scss";
+import { useState } from "react";
 
 function MyProject() {
   const title = "Voici quelques projets que j'ai réalisé";
   const subtitle = "ainsi que les compétences acquis pour les réaliser";
+  const [filter, setFilter] = useState("all");
+  const handleFilterChange = (event) => {
+    setFilter(event.target.value);
+  };
 
   return (
     <div className={styles.myproject}>
-      <h2 className={styles.myproject__title}>
+      <h1 className={styles.myproject__title}>
         {title.split("").map((letter, index) => (
           <span
             key={`title-${index}`}
@@ -18,7 +23,7 @@ function MyProject() {
             {letter === " " ? "\u00A0" : letter}
           </span>
         ))}
-        <br /> {/* Ajoute une coupure de ligne */}
+        <br />
         {subtitle.split("").map((letter, index) => (
           <span
             key={`subtitle-${index}`}
@@ -28,9 +33,32 @@ function MyProject() {
             {letter === " " ? "\u00A0" : letter}
           </span>
         ))}
-      </h2>
+      </h1>
+
+      <h2 className={styles.myproject__skills}>Mes compétences</h2>
       <Skylls />
-      <Cards />
+
+      <div className={styles.filter}>
+        <label htmlFor="projectFilter">
+          <h2 className={styles.myproject__skills}>Mes projets</h2>
+        </label>
+        <select
+          id="projectFilter"
+          value={filter}
+          onChange={handleFilterChange}
+          className={styles.filter__select}
+        >
+          {" "}
+          <option value="all">Tous mes projets</option>
+          <option value="Formation Openclassrooms">
+            Projets OpenClassrooms
+          </option>
+          <option value="Projets clients">Projets clients</option>
+        </select>
+      </div>
+      <div className={styles.myproject__cards}>
+        <Cards filter={filter} />
+      </div>
     </div>
   );
 }

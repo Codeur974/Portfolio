@@ -6,16 +6,14 @@ function HomePageContent() {
   return (
     <div className={styles.homePageContent}>
       <h1 className={styles.homePageContent__title}>
-        <span className={styles.homePageContent__outline}>hello, je suis </span>
+        <span className={styles.homePageContent__outline}>Hello, je suis </span>
         Eric Sermande,{" "}
         <span className={styles.homePageContent__outline}>
-          {" "}
           mais on m&apos;appelle
         </span>
         <span> Codeur974, </span>
         <span className={styles.homePageContent__outline}>
-          {" "}
-          sur les réseau sociaux.
+          sur les réseaux sociaux.
         </span>
       </h1>
       <h2 className={styles.homePageContent__description}>

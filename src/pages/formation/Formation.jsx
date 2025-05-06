@@ -1,6 +1,6 @@
 import styles from "./cV.module.scss";
 
-function CV() {
+function Formation() {
   return (
     <div className={styles.cvSection}>
       <h2>Formations</h2>
@@ -23,4 +23,4 @@ function CV() {
   );
 }
 
-export default CV;
+export default Formation;

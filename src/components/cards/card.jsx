@@ -55,6 +55,7 @@ function Card({ itemCard }) {
           <img
             src={`${import.meta.env.BASE_URL}${itemCard.cover}`}
             alt={itemCard.title}
+            loading="lazy"
           />
           <h3>{itemCard.title}</h3>
         </div>
