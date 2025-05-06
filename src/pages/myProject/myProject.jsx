@@ -1,15 +1,22 @@
-import Cards from "../../components/cards/cards";
-import Skylls from "../../components/mySkills/MySkills";
-import styles from "./myproject.module.scss";
 import { useState } from "react";
+import Cards from "../../components/cards/cards";
+import ContactForm from "../../components/contactForme/ContactForm";
+import MySkills from "../../components/mySkills/Myskills";
+
+import styles from "./myproject.module.scss";
 
 function MyProject() {
   const title = "Voici quelques projets que j'ai réalisé";
   const subtitle = "ainsi que les compétences acquis pour les réaliser";
   const [filter, setFilter] = useState("all");
+  const [isModalOpen, setIsModalOpen] = useState(false); // État pour la modale
+
   const handleFilterChange = (event) => {
     setFilter(event.target.value);
   };
+
+  const openModal = () => setIsModalOpen(true); // Ouvre la modale
+  const closeModal = () => setIsModalOpen(false); // Ferme la modale
 
   return (
     <div className={styles.myproject}>
@@ -36,7 +43,7 @@ function MyProject() {
       </h1>
 
       <h2 className={styles.myproject__skills}>Mes compétences</h2>
-      <Skylls />
+      <MySkills />
 
       <div className={styles.filter}>
         <label htmlFor="projectFilter">
@@ -48,7 +55,6 @@ function MyProject() {
           onChange={handleFilterChange}
           className={styles.filter__select}
         >
-          {" "}
           <option value="all">Tous mes projets</option>
           <option value="Formation Openclassrooms">
             Projets OpenClassrooms
@@ -59,6 +65,14 @@ function MyProject() {
       <div className={styles.myproject__cards}>
         <Cards filter={filter} />
       </div>
+
+      {/* Bouton pour ouvrir la modale */}
+      <button onClick={openModal} className={styles.contactButton}>
+        Contactez-moi
+      </button>
+
+      {/* Modale avec le formulaire */}
+      {isModalOpen && <ContactForm onClose={closeModal} />}
     </div>
   );
 }

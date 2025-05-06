@@ -48,16 +48,40 @@
   }
 }
 .filter__select {
+  height: 35px;
   margin-bottom: 20px;
   border: 2px solid brown;
   border-radius: 10px;
   font-size: 1.2rem;
   color: #0056b3;
+  padding: 0 10px;
 
   @media (max-width: 768px) {
     margin-bottom: 70px;
     width: 100%;
     padding: 0 20px;
+  }
+}
+.contactButton {
+  margin: 20px auto;
+  padding: 12px 24px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+
+  &:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+
+    &:active {
+      transform: scale(0.95);
+    }
   }
 }
 
