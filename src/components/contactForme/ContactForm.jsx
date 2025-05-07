@@ -1,18 +1,29 @@
+import emailjs from "emailjs-com";
+import { useContactForm } from "../../context/useContactForm";
 import styles from "./contactform.module.scss";
-import { useContactForm } from "../../context/useContactForm"; // Import du contexte
 
 function ContactForm() {
-  const { closeContactForm } = useContactForm(); // Utilisation du contexte pour fermer la modale
+  const { closeContactForm } = useContactForm();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const formData = new FormData(e.target);
-    const data = Object.fromEntries(formData.entries());
 
-    console.log("Données du formulaire :", data);
-
-    // Ajoutez ici l'envoi des données à un service ou une API
-    closeContactForm(); // Ferme la modale après soumission
+    emailjs
+      .sendForm(
+        "service_bc51nzi",
+        "Formulaire_de_contact",
+        e.target,
+        "GW06hD3NPpCzRdA_o"
+      )
+      .then(() => {
+        e.target.reset();
+        alert("Message envoyé avec succès !");
+        closeContactForm();
+      })
+      .catch((error) => {
+        alert("Erreur lors de l'envoi du message.");
+        console.error("Erreur EmailJS :", error);
+      });
   };
 
   return (
