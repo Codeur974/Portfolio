@@ -77,9 +77,6 @@ function About() {
         restant attentif aux détails et aux performances.
       </p>
 
-      <h2>
-        <FaEnvelope className={styles.icon} /> Contact
-      </h2>
       <div className={styles.contact}>
         <p>
           <FaEnvelope className={styles.icon} />{" "}

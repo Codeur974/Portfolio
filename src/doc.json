@@ -3,7 +3,7 @@
     "id": "c67ab8a7",
     "title": "Projet Booki",
     "cover": "/images/p2.webp",
-    "description": "L’entreprise souhaite développer un site Internet qui permette aux usagers de trouver des hébergements et des activités dans la ville de leur choix. Une maquette a été fourni pour l'intégration du site. ",
+    "description": "Ce site  permet aux usagers de trouver des hébergements et des activités dans la ville de leur choix, classé selon certain critères Une maquette a été fourni pour l'intégration du site. ",
     "repository": "https://github.com/Codeur974/booki-starter-code",
     "link": "https://codeur974.github.io/booki-starter-code/",
     "technologies": [
@@ -16,7 +16,7 @@
     "id": "c68ab8a9",
     "title": "Projet Omyfood",
     "cover": "/images/p4.webp",
-    "description": "Ma mission ici était de développer un site “mobile first” qui répertorie les menus de restaurants gastronomiques. Les clients pourront composer le menu de leur repas pour que les plats soient prêts à leur arrivée.",
+    "description": " développer en “mobile first”, ce site répertorie les menus de restaurants gastronomiques. Les clients pourront composer le menu pour que les plats soient prêts à leur arrivée.",
     "repository": "https://github.com/Codeur974/ohmyfood",
     "link": "https://codeur974.github.io/ohmyfood/",
     "technologies": [
@@ -30,7 +30,7 @@
     "id": "c57ab8a2",
     "title": "Sophie Bluel",
     "cover": "/images/p6.webp",
-    "description": "Je devais créer un portefolio pour une architecte d'intérieur, ou je devais créer la page de connection et la page qui permettait a l'administratrice de gérer l'ajout et la supression de ses projets.",
+    "description": "Création d'un portefolio pour une architecte d'intérieur, avec l'integration de la page de connexion et la page qui permet a l'utilisateur d'ajouter ou de supprimer ses projets sans que la page se recharge.",
     "repository": "https://github.com/Codeur974/Portfolio-architecte-sophie-bluel",
     "link": "",
     "technologies": [
@@ -58,7 +58,7 @@
     "id": "c62ab8a3",
     "title": "724-Events",
     "cover": "/images/p9.webp",
-    "description": "Je devais débugger le site d'une agence d'événementiel grâce à une série de tests unitaires et d'intégration. J'ai également corrigé les erreurs de code.",
+    "description": " Trouver les bugs du site d'une agence événementiel grâce à une série de tests unitaires et d'intégration, puis utilisation d'outils de debogage pour corriger les bugs et  erreurs de code.",
     "repository": "https://github.com/Codeur974/724-Events",
     "link": "",
     "technologies": [
@@ -72,7 +72,7 @@
     "id": "c37ab9a7",
     "title": "Argent Bank",
     "cover": "/images/p10.webp",
-    "description": "Ma mission était d'intégrer le front-end avec le back-end via des appels API.Vous écrirez des appels à l'API REST pour connecter les deux parties de l'application, assurant une communication fluide entre le client et le serveur.",
+    "description": "Integration du front-end  via des appels API, et mise en place des appels à l'API REST pour connecter les deux parties de l'application, assurant une communication fluide entre le client et le serveur.",
     "repository": "https://github.com/Codeur974/ArgentBank",
     "link": "",
     "technologies": [

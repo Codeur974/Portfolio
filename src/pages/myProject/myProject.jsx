@@ -1,22 +1,17 @@
 import { useState } from "react";
 import Cards from "../../components/cards/cards";
-import ContactForm from "../../components/contactForme/ContactForm";
-import MySkills from "../../components/mySkills/Myskills";
 
 import styles from "./myproject.module.scss";
+import MySkills from "../../components/mySkills/MySkills";
 
 function MyProject() {
   const title = "Voici quelques projets que j'ai réalisé";
   const subtitle = "ainsi que les compétences acquis pour les réaliser";
   const [filter, setFilter] = useState("all");
-  const [isModalOpen, setIsModalOpen] = useState(false); // État pour la modale
 
   const handleFilterChange = (event) => {
     setFilter(event.target.value);
   };
-
-  const openModal = () => setIsModalOpen(true); // Ouvre la modale
-  const closeModal = () => setIsModalOpen(false); // Ferme la modale
 
   return (
     <div className={styles.myproject}>
@@ -65,14 +60,6 @@ function MyProject() {
       <div className={styles.myproject__cards}>
         <Cards filter={filter} />
       </div>
-
-      {/* Bouton pour ouvrir la modale */}
-      <button onClick={openModal} className={styles.contactButton}>
-        Contactez-moi
-      </button>
-
-      {/* Modale avec le formulaire */}
-      {isModalOpen && <ContactForm onClose={closeModal} />}
     </div>
   );
 }

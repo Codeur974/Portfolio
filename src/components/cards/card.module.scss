@@ -1,7 +1,7 @@
 .cards__container {
   height: auto;
   max-width: 1440px;
-  margin: 6rem auto;
+  margin: 6rem auto 3rem;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 130px 30px;
@@ -15,7 +15,7 @@
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
     margin: 2rem auto 20px;
-    gap: 50px;
+    gap: 55px;
   }
 }
 
@@ -61,6 +61,9 @@
     align-items: center;
     border-radius: 0 20px 0 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    p {
+      margin-top: 0;
+    }
   }
 
   .cardFront {
@@ -78,7 +81,7 @@
     box-sizing: border-box;
 
     .links {
-      margin-top: 10px;
+      margin-top: 8px;
       display: flex;
       flex-direction: column;
       gap: 10px;

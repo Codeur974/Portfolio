@@ -1,4 +1,4 @@
-import styles from "./cV.module.scss";
+import styles from "./formation.module.scss";
 
 function Formation() {
   return (
@@ -6,17 +6,44 @@ function Formation() {
       <h2>Formations</h2>
       <ul>
         <li>
-          <strong>React Mastery</strong> – Formation avancée en React (Hooks,
-          routing, state management)
+          <h3>React Mastery</h3> – Formation avancée en React :
+          <ul>
+            <li>Hooks</li>
+            <li>Routing</li>
+            <li>State management</li>
+          </ul>
         </li>
         <li>
-          <strong>Begin JavaScript</strong> – Bases solides en JavaScript
-          moderne (variables, fonctions, DOM, )
+          <h3>Begin JavaScript</h3> – Bases solides en JavaScript moderne :
+          <ul>
+            <li>Variables</li>
+            <li>Fonctions</li>
+            <li>DOM</li>
+          </ul>
         </li>
         <li>
-          <strong>Intégrateur Web - OpenClassrooms</strong> – Intégration
-          HTML/CSS responsive, accessibilité, SEO, Mongodb, Node.js, Express.js,
-          React.js, Redux, Git, GitHub, Figma, Sass, Jest,
+          <h3>
+            Intégrateur Web – OpenClassrooms (Formation diplômante, Niveau
+            Bac+2)
+          </h3>
+
+          <ul>
+            <li>Intégration responsive : HTML5, CSS3, Flexbox, Grid</li>
+            <li>Accessibilité numérique (RGAA)</li>
+            <li>Optimisation SEO technique</li>
+            <li>Versionning : Git & GitHub (branche, merge, pull request)</li>
+            <li>Prototypage & maquettes : Figma</li>
+            <li>Préprocesseur CSS : Sass</li>
+            <li>JavaScript avancé : DOM, API, programmation asynchrone</li>
+            <li>Frameworks & librairies : React.js, Redux</li>
+            <li>Tests unitaires : Jest</li>
+            <li>Backend : Node.js, Express.js</li>
+            <li>Base de données NoSQL : MongoDB</li>
+            <li>Méthodologie de projet : Agile / Scrum, Notion</li>
+            <li>
+              Livrables professionnels : projets notés, soutenances devant jury
+            </li>
+          </ul>
         </li>
       </ul>
     </div>

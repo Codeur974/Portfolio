@@ -22,7 +22,7 @@
     height: auto;
     perspective: none;
     transform-style: flat;
-    display: flex;
+    gap: 0 20px;
     flex-wrap: wrap;
     justify-content: center;
   }
@@ -36,6 +36,7 @@
   transform: rotateY(calc(var(--angle) * 1deg)) translateX(200px);
   animation: rotateGroup 15s linear infinite;
   margin: 10px;
+
   @media (max-width: 1024px) {
     transform-origin: -148px 0;
     transform: rotateY(calc(var(--angle) * 1deg)) translateX(100px);
@@ -53,12 +54,15 @@
     background: white;
     border-radius: 10px;
     padding: 8px;
-    width: 120px;
+    width: 115px;
     height: 140px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
     transform-style: preserve-3d;
     transition: transform 0.6s ease-in-out;
+    @media (max-width: 768px) {
+      width: 110px;
+    }
 
     .cardFace {
       position: absolute;

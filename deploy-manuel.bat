@@ -18,8 +18,18 @@ cd dist
 
 echo 🔄 Initialisation du dépôt Git...
 git init
+git remote remove origin
 git remote add origin https://github.com/Codeur974/Portfolio.git
-git checkout -b gh-pages
+
+echo 🔍 Vérification de l'existence de la branche 'gh-pages'...
+git branch | findstr "gh-pages" >nul
+if errorlevel 1 (
+  git checkout -b gh-pages
+  echo ✅ Nouvelle branche 'gh-pages' créée.
+) else (
+  git checkout gh-pages
+  echo ✅ Branche 'gh-pages' existante utilisée.
+)
 
 echo 📝 Ajout et commit...
 git add .

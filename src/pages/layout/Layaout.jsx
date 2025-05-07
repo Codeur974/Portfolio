@@ -1,14 +1,29 @@
-import { Outlet } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
 import Header from "../../components/header/Header";
 import Footer from "../../components/footer/Footer";
+import { useContactForm } from "../../context/useContactForm";
+import ContactForm from "../../components/contactForme/ContactForm";
+import Button from "../../components/button/Button";
+import styles from "./layout.module.scss";
+
 function Layaout() {
+  const { isContactFormOpen } = useContactForm();
+  const location = useLocation();
+
+  // Vérifie si l'utilisateur est sur la page d'accueil
+  const isHomePage = location.pathname === "/";
+
   return (
-    <div>
+    <div
+      className={`${styles.layout} ${isHomePage ? styles["layout--home"] : ""}`}
+    >
       <Header />
-      <main>
+      <main className={styles.layout__main}>
         <Outlet />
       </main>
-      <Footer />
+      {!isHomePage && <Footer className={styles.layout__footer} />}
+      <Button />
+      {isContactFormOpen && <ContactForm />}
     </div>
   );
 }

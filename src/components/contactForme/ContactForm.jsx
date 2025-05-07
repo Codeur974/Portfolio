@@ -1,6 +1,9 @@
 import styles from "./contactform.module.scss";
+import { useContactForm } from "../../context/useContactForm"; // Import du contexte
 
-function ContactForm({ onClose }) {
+function ContactForm() {
+  const { closeContactForm } = useContactForm(); // Utilisation du contexte pour fermer la modale
+
   const handleSubmit = (e) => {
     e.preventDefault();
     const formData = new FormData(e.target);
@@ -9,13 +12,13 @@ function ContactForm({ onClose }) {
     console.log("Données du formulaire :", data);
 
     // Ajoutez ici l'envoi des données à un service ou une API
-    onClose(); // Ferme la modale après soumission
+    closeContactForm(); // Ferme la modale après soumission
   };
 
   return (
     <div className={styles.modalOverlay}>
       <div className={styles.modal}>
-        <button onClick={onClose} className={styles.closeButton}>
+        <button onClick={closeContactForm} className={styles.closeButton}>
           &times;
         </button>
         <h2>Contactez-moi</h2>

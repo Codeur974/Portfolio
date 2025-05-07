@@ -5,10 +5,12 @@ import About from "./pages/about/About";
 import Formation from "./pages/formation/Formation";
 import Menu from "./pages/menu/Menu";
 import MyProject from "./pages/myProject/myProject";
+import { ContactFormProvider } from "./context/ContactFormProvider";
 
 function App() {
   return (
-    <>
+    // Le ContactFormProvider enveloppe toute l'application
+    <ContactFormProvider>
       <Router basename="/Portfolio/">
         <Routes>
           <Route index element={<Home />} />
@@ -20,7 +22,7 @@ function App() {
           </Route>
         </Routes>
       </Router>
-    </>
+    </ContactFormProvider>
   );
 }
 

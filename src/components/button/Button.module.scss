@@ -1,0 +1,27 @@
+.contactButton {
+  position: absolute;
+  bottom: 70px;
+  right: 20px;
+  z-index: 1000;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+
+  background: linear-gradient(to bottom, #d32f2f, #b71c1c);
+  color: #fff;
+  border: none;
+  border-radius: 2rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  transition: background 0.3s ease, transform 0.2s;
+
+  &:hover {
+    background: linear-gradient(to bottom, #b71c1c, #880e4f);
+    transform: scale(1.05);
+  }
+}
