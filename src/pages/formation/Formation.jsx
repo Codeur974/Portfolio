@@ -2,7 +2,7 @@ import styles from "./formation.module.scss";
 
 function Formation() {
   return (
-    <div className={styles.cvSection}>
+    <div className={styles.formationSection}>
       <h2>Formations</h2>
       <ul>
         <li>
