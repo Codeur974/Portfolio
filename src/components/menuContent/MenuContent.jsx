@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import styles from "./MenuContent.module.scss";
+import styles from "./menuContent.module.scss";
 import doc from "../../doc.json"; // Import du fichier JSON
 import {
   FaHtml5,
