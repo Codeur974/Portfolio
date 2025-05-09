@@ -11,7 +11,7 @@ function App() {
   return (
     // Le ContactFormProvider enveloppe toute l'application
     <ContactFormProvider>
-      <Router basename="/Portfolio/">
+      <Router>
         <Routes>
           <Route index element={<Home />} />
           <Route path="/" element={<Layaout />}>
