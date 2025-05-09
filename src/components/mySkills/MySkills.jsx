@@ -18,7 +18,6 @@ import {
 
 import { SiRedux, SiJest, SiMongodb } from "react-icons/si";
 
-// Associe les noms des icônes aux composants React correspondants
 const icons = {
   FaHtml5,
   FaCss3Alt,
