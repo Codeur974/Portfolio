@@ -52,11 +52,7 @@ function Card({ itemCard }) {
       <div className={styles.cardInner}>
         {/* Face avant */}
         <div className={styles.cardFront}>
-          <img
-            src={`${import.meta.env.BASE_URL}${itemCard.cover}`}
-            alt={itemCard.title}
-            loading="lazy"
-          />
+          <img src={itemCard.cover} alt={itemCard.title} loading="lazy" />
           <h3>{itemCard.title}</h3>
         </div>
 
