@@ -1,22 +1,22 @@
-import styles from "./mySkills.module.scss";
-import doc from "../../doc.json";
 import {
-  FaHtml5,
+  FaChartLine,
   FaCss3Alt,
-  FaJs,
-  FaReact,
-  FaNodeJs,
-  FaGitAlt,
   FaDatabase,
   FaFigma,
+  FaGitAlt,
+  FaHtml5,
+  FaJs,
+  FaNodeJs,
   FaProjectDiagram,
-  FaTasks,
-  FaSearch,
-  FaChartLine,
+  FaReact,
   FaSass,
+  FaSearch,
+  FaTasks,
 } from "react-icons/fa";
+import doc from "../../doc.json";
+import styles from "./myskills.module.scss";
 
-import { SiRedux, SiJest, SiMongodb } from "react-icons/si";
+import { SiJest, SiMongodb, SiRedux } from "react-icons/si";
 
 const icons = {
   FaHtml5,
