@@ -1,13 +1,13 @@
-import styles from "./about.module.scss";
 import {
-  FaUser,
-  FaTools,
-  FaRocket,
   FaBullseye,
   FaEnvelope,
-  FaLinkedin,
   FaGithub,
+  FaLinkedin,
+  FaRocket,
+  FaTools,
+  FaUser,
 } from "react-icons/fa";
+import styles from "./about.module.scss";
 
 function About() {
   return (

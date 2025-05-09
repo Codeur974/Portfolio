@@ -4,7 +4,7 @@ import Home from "./pages/home/Home";
 import About from "./pages/about/About";
 import Formation from "./pages/formation/Formation";
 import Menu from "./pages/menu/Menu";
-import MyProject from "./pages/myProject/myProject";
+import MyProject from "./pages/myProject/MyProject";
 import { ContactFormProvider } from "./context/ContactFormProvider";
 
 function App() {
