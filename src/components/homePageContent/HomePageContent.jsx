@@ -1,4 +1,4 @@
-import styles from "./HomePageContent.module.scss";
+import styles from "./homePageContent.module.scss";
 import { FiArrowRight } from "react-icons/fi";
 
 import { Link } from "react-router-dom";
