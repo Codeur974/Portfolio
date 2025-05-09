@@ -100,7 +100,7 @@
 
   .submitButton {
     padding: 12px 24px;
-    background-color: #d2b48c; // bleu pastel
+    background-color: #d2b48c;
     color: #fff;
     border: none;
     border-radius: 8px;
@@ -112,7 +112,7 @@
       box-shadow 0.3s ease;
 
     &:hover {
-      background-color: #c19a6b; // un peu plus foncé au hover
+      background-color: #c19a6b;
       transform: scale(1.05);
       box-shadow: 0 4px 10px rgba(51, 147, 230, 0.3);
     }
