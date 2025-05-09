@@ -1,4 +1,4 @@
-import styles from "./MySkills.module.scss";
+import styles from "./mySkills.module.scss";
 import doc from "../../doc.json";
 import {
   FaHtml5,
