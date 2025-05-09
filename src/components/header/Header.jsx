@@ -1,8 +1,7 @@
-import logo from "../../assets/logo.png";
-import styles from "./Header.module.scss";
-import { Link } from "react-router-dom";
-import { useLocation } from "react-router-dom";
 import { FaBars } from "react-icons/fa";
+import { Link, useLocation } from "react-router-dom";
+import logo from "../../assets/logo.png";
+import styles from "./header.module.scss";
 
 function Header() {
   const location = useLocation();
