@@ -8,7 +8,8 @@
     "link": "https://codeur974.github.io/booki-starter-code/",
     "technologies": [
       { "name": "HTML5", "icon": "FaHtml5", "color": "#E34F26" },
-      { "name": "CSS3", "icon": "FaCss3Alt", "color": "#1572B6" }
+      { "name": "CSS3", "icon": "FaCss3Alt", "color": "#1572B6" },
+      { "name": "Figma", "color": "#F24E1E", "icon": "FaFigma" }
     ],
     "category": "Formation Openclassrooms"
   },
@@ -22,7 +23,8 @@
     "technologies": [
       { "name": "HTML5", "icon": "FaHtml5", "color": "#E34F26" },
       { "name": "CSS3", "icon": "FaCss3Alt", "color": "#1572B6" },
-      { "name": "Sass", "color": "#CC6699", "icon": "FaSass" }
+      { "name": "Sass", "color": "#CC6699", "icon": "FaSass" },
+      { "name": "Figma", "color": "#F24E1E", "icon": "FaFigma" }
     ],
     "category": "Formation Openclassrooms"
   },
@@ -36,7 +38,8 @@
     "technologies": [
       { "name": "HTML5", "icon": "FaHtml5", "color": "#E34F26" },
       { "name": "CSS3", "icon": "FaCss3Alt", "color": "#1572B6" },
-      { "name": "JavaScript", "color": "#F7DF1E", "icon": "FaJs" }
+      { "name": "JavaScript", "color": "#F7DF1E", "icon": "FaJs" },
+      { "name": "Figma", "color": "#F24E1E", "icon": "FaFigma" }
     ],
     "category": "Formation Openclassrooms"
   },
@@ -48,6 +51,8 @@
     "repository": "https://github.com/Codeur974/Nina-Carducci",
     "link": "",
     "technologies": [
+      { "name": "HTML5", "icon": "FaHtml5", "color": "#E34F26" },
+      { "name": "CSS3", "icon": "FaCss3Alt", "color": "#1572B6" },
       { "name": "SEO", "color": "#4CAF50", "icon": "FaSearch" },
       { "name": "Optimisation", "color": "#FFC300", "icon": "FaChartLine" },
       { "name": "JavaScript", "color": "#F7DF1E", "icon": "FaJs" }
@@ -81,7 +86,8 @@
       { "name": "Sass", "color": "#CC6699", "icon": "FaSass" },
       { "name": "React", "color": "#61DAFB", "icon": "FaReact" },
       { "name": "Node.js", "color": "#339933", "icon": "FaNodeJs" },
-      { "name": "Redux", "color": "#764ABC", "icon": "SiRedux" }
+      { "name": "Redux", "color": "#764ABC", "icon": "SiRedux" },
+      { "name": "MongoDB", "color": "#4DB33D", "icon": "SiMongodb" }
     ],
     "category": "Formation Openclassrooms"
   },

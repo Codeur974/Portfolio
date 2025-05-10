@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { ContactFormContext } from "./ContactFormContext";
 
-// Fournisseur du contexte
 export const ContactFormProvider = ({ children }) => {
   const [isContactFormOpen, setIsContactFormOpen] = useState(false);
 

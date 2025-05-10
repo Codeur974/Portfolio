@@ -9,7 +9,6 @@ import { ContactFormProvider } from "./context/ContactFormProvider";
 
 function App() {
   return (
-    // Le ContactFormProvider enveloppe toute l'application
     <ContactFormProvider>
       <Router>
         <Routes>

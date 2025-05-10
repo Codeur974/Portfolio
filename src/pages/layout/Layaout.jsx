@@ -10,7 +10,6 @@ function Layaout() {
   const { isContactFormOpen } = useContactForm();
   const location = useLocation();
 
-  // Vérifie si l'utilisateur est sur la page d'accueil
   const isHomePage = location.pathname === "/";
 
   return (

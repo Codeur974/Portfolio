@@ -79,15 +79,15 @@
   textarea {
     padding: 12px;
     font-size: 1rem;
-    border: 1px solid #ddd; // bord clair
+    border: 1px solid #ddd;
     border-radius: 8px;
     width: 100%;
     box-sizing: border-box;
-    background-color: #fff; // fond blanc
+    background-color: #fff;
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
 
     &:focus {
-      border-color: #4da6ff; // bleu pastel pour focus
+      border-color: #4da6ff;
       outline: none;
       box-shadow: 0 0 5px rgba(77, 166, 255, 0.4);
     }

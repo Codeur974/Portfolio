@@ -32,7 +32,7 @@
   cursor: pointer;
   transition: transform 0.5s ease, box-shadow 0.5s ease;
   &.flipped {
-    z-index: 10; /* Place la carte au-dessus des autres */
+    z-index: 10;
   }
   &:hover {
     transform: scale(1.05);
@@ -105,12 +105,10 @@
     gap: 10px;
 
     .icon {
-      font-size: 1.5rem; /* Taille des icônes */
-      color: #333; /* Couleur par défaut */
-      transition: color 0.3s ease;
+      font-size: 1.5rem;
 
       &:hover {
-        color: #007bff; /* Couleur au survol */
+        color: #007bff;
       }
     }
   }

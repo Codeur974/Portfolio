@@ -44,7 +44,7 @@
   }
   @media (max-width: 768px) {
     .category {
-      position: static; /* Permet aux éléments de s'empiler naturellement */
+      position: static;
       transform: none;
       animation: none;
     }
