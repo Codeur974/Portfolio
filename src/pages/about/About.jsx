@@ -24,11 +24,10 @@ function About() {
         <FaTools className={styles.icon} /> Mon parcours
       </h2>
       <p>
-        Après{" "}
-        <span className={styles.highlight}>ma reconversion professionnel</span>,
-        j’ai développé une expertise en développement frontend, en mettant
-        l’accent sur des technologies comme React, Redux, Tailwind CSS et
-        d’autres outils modernes.
+        {" "}
+        Après ma reconversion professionnel , j’ai développé une expertise en
+        développement frontend, en mettant l’accent sur des technologies comme
+        React, Redux, Tailwind CSS et d’autres outils modernes.
       </p>
       <p>
         Mon objectif est de concevoir des applications fluides, ergonomiques et

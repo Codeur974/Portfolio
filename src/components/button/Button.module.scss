@@ -24,9 +24,11 @@
     right: auto;
     transform: translate(-50%);
   }
+  @media (max-width: 768px) {
+    font-size: 0.9rem;
+  }
 
   &:hover {
     background: linear-gradient(to bottom, #b71c1c, #880e4f);
-    transform: scale(1.05);
   }
 }
