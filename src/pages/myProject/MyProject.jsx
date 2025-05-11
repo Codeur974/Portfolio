@@ -6,7 +6,7 @@ import MySkills from "../../components/mySkills/MySkills";
 
 function MyProject() {
   const title = "Voici quelques projets que j'ai réalisés";
-  const subtitle = "ainsi que les compétences acquises pour les réaliser";
+  const subtitle = "ainsi que les compétences acquises.";
   const [filter, setFilter] = useState("all");
 
   const handleFilterChange = (event) => {
