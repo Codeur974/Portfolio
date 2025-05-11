@@ -22,7 +22,7 @@
     height: auto;
     perspective: none;
     transform-style: flat;
-    gap: 0 15px;
+    gap: 0 20px;
     flex-wrap: wrap;
     justify-content: center;
   }
@@ -34,13 +34,18 @@
   left: 100%;
   transform-origin: -200px 0;
   transform: rotateY(calc(var(--angle) * 1deg)) translateX(200px);
-  animation: rotateGroup 15s linear infinite;
+  animation: rotateGroup 10s linear infinite;
   margin: 10px;
+  @media (max-width: 1200px) {
+    transform-origin: -100px 0;
+    transform: rotateY(calc(var(--angle) * 1deg)) translateX(200px);
+    animation: rotateGroup 10s linear infinite;
+  }
 
   @media (max-width: 1024px) {
-    transform-origin: -148px 0;
+    transform-origin: -50px 0;
     transform: rotateY(calc(var(--angle) * 1deg)) translateX(100px);
-    animation: rotateGroup 15s linear infinite;
+    animation: rotateGroup 10s linear infinite;
   }
   @media (max-width: 768px) {
     .category {

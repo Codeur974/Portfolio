@@ -3,7 +3,7 @@
     "id": "c67ab8a7",
     "title": "Projet Booki",
     "cover": "/images/p2.webp",
-    "description": "Ce site  permet aux usagers de trouver des hébergements et des activités dans la ville de leur choix, classés selon certains critères. Une maquette a été fourni pour l'intégration du site. ",
+    "description": "Ce site  permet aux usagers de trouver des hébergements et des activités dans la ville de leur choix, classés selon certains critères. Une maquette a été fourni pour l'intégration. ",
     "repository": "https://github.com/Codeur974/booki-starter-code",
     "link": "https://codeur974.github.io/booki-starter-code/",
     "technologies": [
@@ -32,7 +32,7 @@
     "id": "c57ab8a2",
     "title": "Sophie Bluel",
     "cover": "/images/p6.webp",
-    "description": "Création d'un portefolio pour une architecte d'intérieur, avec integration d'une page de connexion et d'une page permettant a l'utilisateur d'ajouter ou de supprimer ses projets sans que la page ne se recharge.",
+    "description": "Création d'un portefolio pour une architecte d'intérieur, avec integration d'une page de connexion et permettant a l'utilisateur d'ajouter ou de supprimer ses projets sans que la page ne se recharge.",
     "repository": "https://github.com/Codeur974/Portfolio-architecte-sophie-bluel",
     "link": "",
     "technologies": [

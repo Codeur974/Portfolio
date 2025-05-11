@@ -1,22 +1,21 @@
 import {
-  FaChartLine,
+  FaHtml5,
   FaCss3Alt,
+  FaJs,
+  FaReact,
+  FaNodeJs,
+  FaGitAlt,
   FaDatabase,
   FaFigma,
-  FaGitAlt,
-  FaHtml5,
-  FaJs,
-  FaNodeJs,
   FaProjectDiagram,
-  FaReact,
-  FaSass,
-  FaSearch,
   FaTasks,
+  FaSearch,
+  FaChartLine,
+  FaSass,
 } from "react-icons/fa";
+import { SiJest, SiMongodb, SiRedux } from "react-icons/si";
 import doc from "../../doc.json";
 import styles from "./myskills.module.scss";
-
-import { SiJest, SiMongodb, SiRedux } from "react-icons/si";
 
 const icons = {
   FaHtml5,
