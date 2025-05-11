@@ -80,12 +80,12 @@ function About() {
       <div className={styles.contact}>
         <p>
           <FaEnvelope className={styles.icon} />{" "}
-          <a href="eric.sermande@gmail.com">Mon email</a>
+          <a href="mailto:eric.sermande@gmail.com">Mon email</a>
         </p>
         <p>
           <FaLinkedin className={styles.icon} />{" "}
           <a
-            href="https://linkedin.com/in/tonlinkedin"
+            href="https://www.linkedin.com/in/eric-sermande-59521a212/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3B32Y1IZf1RGq4TG2BZkNCPQ%3D%3D"
             target="_blank"
             rel="noopener noreferrer"
           >
