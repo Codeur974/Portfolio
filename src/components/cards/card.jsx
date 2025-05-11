@@ -50,7 +50,6 @@ function Card({ itemCard }) {
       onClick={handleFlip}
     >
       <div className={styles.cardInner}>
-        {/* Face avant */}
         <div className={styles.cardFront}>
           <img src={itemCard.cover} alt={itemCard.title} loading="lazy" />
           <h3>{itemCard.title}</h3>

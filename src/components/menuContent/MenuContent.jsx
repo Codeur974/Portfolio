@@ -22,7 +22,6 @@ import {
 
 import { SiRedux, SiJest, SiMongodb } from "react-icons/si";
 
-// Associe les noms des icônes aux composants React correspondants
 const icons = {
   FaHtml5,
   FaCss3Alt,
@@ -43,15 +42,13 @@ const icons = {
 };
 
 function MenuContent() {
-  // Récupère uniquement la section "skills" du fichier JSON
   const skillsData = doc.find((section) => section.id === "skills")?.data || [];
 
   return (
     <div className={styles.menu}>
-      {/* Affichage des icônes avec animation et couleurs dynamiques */}
       {skillsData.map((category, index) =>
         category.skills.map((skill, i) => {
-          const IconComponent = icons[skill.icon]; // Récupère l'icône pour chaque compétence
+          const IconComponent = icons[skill.icon];
           return IconComponent ? (
             <div
               key={`${index}-${i}`}

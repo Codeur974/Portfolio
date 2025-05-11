@@ -5,8 +5,10 @@ import styles from "./myproject.module.scss";
 import MySkills from "../../components/mySkills/MySkills";
 
 function MyProject() {
-  const title = "Voici quelques projets que j'ai réalisés";
-  const subtitle = "ainsi que les compétences acquises.";
+  const titleLines = [
+    "Voici quelques projets que j'ai réalisés",
+    "ainsi que les compétences acquises.",
+  ];
   const [filter, setFilter] = useState("all");
 
   const handleFilterChange = (event) => {
@@ -16,23 +18,20 @@ function MyProject() {
   return (
     <div className={styles.myproject}>
       <h1 className={styles.myproject__title}>
-        {title.split("").map((letter, index) => (
-          <span
-            key={`title-${index}`}
-            style={{ animationDelay: `${index * 0.1}s` }}
-            className={styles.letter}
-          >
-            {letter === " " ? "\u00A0" : letter}
-          </span>
-        ))}
-        <br />
-        {subtitle.split("").map((letter, index) => (
-          <span
-            key={`subtitle-${index}`}
-            style={{ animationDelay: `${(title.length + index) * 0.1}s` }}
-            className={styles.letter}
-          >
-            {letter === " " ? "\u00A0" : letter}
+        {titleLines.map((line, lineIndex) => (
+          <span key={`line-${lineIndex}`} className={styles.line}>
+            {line.split("").map((letter, letterIndex) => (
+              <span
+                key={`letter-${lineIndex}-${letterIndex}`}
+                style={{
+                  animationDelay: `${lineIndex * 0.5 + letterIndex * 0.1}s`,
+                }}
+                className={styles.letter}
+              >
+                {letter === " " ? "\u00A0" : letter}
+              </span>
+            ))}
+            <br />
           </span>
         ))}
       </h1>

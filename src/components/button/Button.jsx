@@ -1,6 +1,5 @@
 import { useContactForm } from "../../context/useContactForm";
-import styles from "./Button.module.scss"; // Import du fichier SCSS pour le style
-
+import styles from "./Button.module.scss";
 function Button() {
   const { openContactForm } = useContactForm();
 
