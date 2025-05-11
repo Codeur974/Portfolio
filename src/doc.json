@@ -3,7 +3,7 @@
     "id": "c67ab8a7",
     "title": "Projet Booki",
     "cover": "/images/p2.webp",
-    "description": "Ce site  permet aux usagers de trouver des hébergements et des activités dans la ville de leur choix, classé selon certain critères Une maquette a été fourni pour l'intégration du site. ",
+    "description": "Ce site  permet aux usagers de trouver des hébergements et des activités dans la ville de leur choix, classés selon certains critères. Une maquette a été fourni pour l'intégration du site. ",
     "repository": "https://github.com/Codeur974/booki-starter-code",
     "link": "https://codeur974.github.io/booki-starter-code/",
     "technologies": [
@@ -15,9 +15,9 @@
   },
   {
     "id": "c68ab8a9",
-    "title": "Projet Omyfood",
+    "title": "Projet Ohmyfood",
     "cover": "/images/p4.webp",
-    "description": " développer en “mobile first”, ce site répertorie les menus de restaurants gastronomiques. Les clients pourront composer le menu pour que les plats soient prêts à leur arrivée.",
+    "description": " Développer en “mobile first”, ce site répertorie les menus de restaurants gastronomiques. Les clients pourront composer le menu pour que les plats soient prêts à leur arrivée.",
     "repository": "https://github.com/Codeur974/ohmyfood",
     "link": "https://codeur974.github.io/ohmyfood/",
     "technologies": [
@@ -32,7 +32,7 @@
     "id": "c57ab8a2",
     "title": "Sophie Bluel",
     "cover": "/images/p6.webp",
-    "description": "Création d'un portefolio pour une architecte d'intérieur, avec l'integration de la page de connexion et la page qui permet a l'utilisateur d'ajouter ou de supprimer ses projets sans que la page se recharge.",
+    "description": "Création d'un portefolio pour une architecte d'intérieur, avec integration d'une page de connexion et d'une page permettant a l'utilisateur d'ajouter ou de supprimer ses projets sans que la page ne se recharge.",
     "repository": "https://github.com/Codeur974/Portfolio-architecte-sophie-bluel",
     "link": "",
     "technologies": [
@@ -47,7 +47,7 @@
     "id": "c57ab2a7",
     "title": "Nina Carducci",
     "cover": "/images/p8.webp",
-    "description": "Optimisation du référencement d'un site de photographe, en metant en place un référencement local,en ajoutant des meta-donnés pour les reseau sociaux et faire une optimisation global du site.",
+    "description": "Optimisation du référencement d'un site de photographe, en mettant en place un référencement local, en ajoutant des meta-donnés pour les reseau sociaux et faire une optimisation global du site.",
     "repository": "https://github.com/Codeur974/Nina-Carducci",
     "link": "",
     "technologies": [
@@ -63,7 +63,7 @@
     "id": "c62ab8a3",
     "title": "724-Events",
     "cover": "/images/p9.webp",
-    "description": " Trouver les bugs du site d'une agence événementiel grâce à une série de tests unitaires et d'intégration, puis utilisation d'outils de debogage pour corriger les bugs et  erreurs de code.",
+    "description": " Trouver les bugs du site d'une agence événementiel grâce à une série de tests unitaires et d'intégration, puis utilisation d'outils de débogage pour corriger les bugs et  erreurs de code.",
     "repository": "https://github.com/Codeur974/724-Events",
     "link": "",
     "technologies": [
@@ -104,7 +104,7 @@
         ]
       },
       {
-        "type": "framework",
+        "type": "frameworks",
         "skills": [
           { "name": "React", "color": "#61DAFB", "icon": "FaReact" },
           { "name": "Node.js", "color": "#339933", "icon": "FaNodeJs" },
