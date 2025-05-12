@@ -55,25 +55,23 @@ function MySkills() {
               style={{ "--angle": angle }}
             >
               <div className={styles.categoryCard}>
-                <div className={`${styles.cardFace} ${styles.cardFront}`}>
-                  <h2>{category.type}</h2>
-                  {category.skills.map((skill, i) => {
-                    const Icon = icons[skill.icon];
-                    if (!Icon) {
-                      console.error(`Icône manquante pour ${skill.name}`);
-                      return null;
-                    }
-                    return (
-                      <div key={i} className={styles.skill}>
-                        <Icon
-                          className={styles.icon}
-                          style={{ color: skill.color }}
-                        />
-                        <span className={styles.skillName}>{skill.name}</span>
-                      </div>
-                    );
-                  })}
-                </div>
+                <h2>{category.type}</h2>
+                {category.skills.map((skill, i) => {
+                  const Icon = icons[skill.icon];
+                  if (!Icon) {
+                    console.error(`Icône manquante pour ${skill.name}`);
+                    return null;
+                  }
+                  return (
+                    <div key={i} className={styles.skill}>
+                      <Icon
+                        className={styles.icon}
+                        style={{ color: skill.color }}
+                      />
+                      <span className={styles.skillName}>{skill.name}</span>
+                    </div>
+                  );
+                })}
               </div>
             </div>
           );
