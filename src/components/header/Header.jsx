@@ -1,4 +1,5 @@
 import { FaBars } from "react-icons/fa";
+import { FiCalendar } from "react-icons/fi";
 import { Link, useLocation } from "react-router-dom";
 import logo from "../../assets/logo.png";
 import styles from "./header.module.scss";
@@ -7,6 +8,10 @@ function Header() {
   const location = useLocation();
 
   const isMenuPage = location.pathname === "/menu";
+
+  const handleCalendlyClick = () => {
+    window.open("https://calendly.com/digitalcodeur-digitaltekservice-re/30min", "_blank");
+  };
 
   return (
     <div
@@ -19,11 +24,17 @@ function Header() {
       </div>
 
       {!isMenuPage && (
-        <div className={styles.menuToggle}>
-          <Link to="menu">
-            <span className={styles.animatedText}>Par ici le menu</span>
-            <FaBars className={styles.hamburgerIcon} />
-          </Link>
+        <div className={styles.headerActions}>
+          <button onClick={handleCalendlyClick} className={styles.calendlyButton}>
+            <FiCalendar className={styles.calendarIcon} />
+            <span>Prendre RDV</span>
+          </button>
+          <div className={styles.menuToggle}>
+            <Link to="menu">
+              <span className={styles.animatedText}>Par ici le menu</span>
+              <FaBars className={styles.hamburgerIcon} />
+            </Link>
+          </div>
         </div>
       )}
     </div>

@@ -1,8 +1,12 @@
 import styles from "./homePageContent.module.scss";
-import { FiArrowRight } from "react-icons/fi";
+import { FiArrowRight, FiCalendar } from "react-icons/fi";
 
 import { Link } from "react-router-dom";
 function HomePageContent() {
+  const handleCalendlyClick = () => {
+    window.open("https://calendly.com/digitalcodeur-digitaltekservice-re/30min", "_blank");
+  };
+
   return (
     <div className={styles.homePageContent}>
       <h1 className={styles.homePageContent__title}>
@@ -29,6 +33,9 @@ function HomePageContent() {
         <Link to="about">
           <FiArrowRight className={styles.icon} /> En savoir plus sur moi
         </Link>
+        <button onClick={handleCalendlyClick} className={styles.calendlyLink}>
+          <FiCalendar className={styles.icon} /> Réserver un appel
+        </button>
       </div>
     </div>
   );
