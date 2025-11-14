@@ -17,17 +17,27 @@ function ContactForm() {
     e.preventDefault();
     setIsLoading(true);
 
-    emailjs
-      .sendForm(
+    // Envoi de 2 emails en parallèle
+    Promise.all([
+      // Email 1 : Pour vous (admin) avec tous les détails
+      emailjs.sendForm(
         "service_ddg9nuh",
         "Formulaire_de_contact",
         e.target,
         "GW06hD3NPpCzRdA_o"
+      ),
+      // Email 2 : Auto-réponse pour le prospect
+      emailjs.sendForm(
+        "service_ddg9nuh",
+        "template_r837kdn",
+        e.target,
+        "GW06hD3NPpCzRdA_o"
       )
+    ])
       .then(() => {
         e.target.reset();
-        showNotification("Message envoyé avec succès ! Je vous répondrai sous 24h.", "success");
-        setTimeout(() => closeContactForm(), 2000);
+        showNotification("Message envoyé avec succès ! Vous allez recevoir un email de confirmation. Je vous répondrai sous 24h.", "success");
+        setTimeout(() => closeContactForm(), 3000);
       })
       .catch((error) => {
         showNotification("Erreur lors de l'envoi. Veuillez réessayer.", "error");
