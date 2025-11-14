@@ -87,11 +87,11 @@ function ContactForm() {
             Budget estimé :
             <select name="budget" required>
               <option value="">-- Sélectionnez --</option>
-              <option value="Moins de 1000€">Moins de 1000€</option>
-              <option value="1000€ - 3000€">1000€ - 3000€</option>
-              <option value="3000€ - 5000€">3000€ - 5000€</option>
-              <option value="5000€ - 10000€">5000€ - 10000€</option>
-              <option value="Plus de 10000€">Plus de 10000€</option>
+              <option value="Moins de 800€">Moins de 800€ (petit projet)</option>
+              <option value="800€ - 1500€">800€ - 1500€ (site vitrine simple)</option>
+              <option value="1500€ - 2500€">1500€ - 2500€ (site complet / petit e-commerce)</option>
+              <option value="2500€ - 3500€">2500€ - 3500€ (application web / e-commerce)</option>
+              <option value="Plus de 3500€">Plus de 3500€ (projet complexe)</option>
               <option value="À discuter">À discuter</option>
             </select>
           </label>
