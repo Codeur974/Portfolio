@@ -19,7 +19,7 @@ function ContactForm() {
 
     emailjs
       .sendForm(
-        "service_bc51nzi",
+        "service_ddg9nuh",
         "Formulaire_de_contact",
         e.target,
         "GW06hD3NPpCzRdA_o"
