@@ -92,6 +92,23 @@
     "category": "Formation Openclassrooms"
   },
   {
+    "id": "c88rf9b2",
+    "title": "Reflex Bien-être",
+    "cover": "/images/logoreflex.jpg",
+    "description": "Site web complet pour une réflexologue plantaire professionnelle. Présentation des services, système de réservation en ligne, gestion des rendez-vous et espace administrateur. Design moderne et responsive.",
+    "repository": "https://github.com/Codeur974/reflex-bien--tre",
+    "link": "https://reflex-bien-tre.vercel.app",
+    "technologies": [
+      { "name": "Next.js", "icon": "SiNextdotjs", "color": "#000000" },
+      { "name": "TypeScript", "icon": "SiTypescript", "color": "#3178C6" },
+      { "name": "Sass", "color": "#CC6699", "icon": "FaSass" },
+      { "name": "Node.js", "color": "#339933", "icon": "FaNodeJs" },
+      { "name": "Express", "color": "#000000", "icon": "SiExpress" },
+      { "name": "MongoDB", "color": "#4DB33D", "icon": "SiMongodb" }
+    ],
+    "category": "Projets clients"
+  },
+  {
     "id": "skills",
     "data": [
       {

@@ -16,7 +16,7 @@ import {
   FaSass,
 } from "react-icons/fa";
 
-import { SiRedux, SiJest, SiMongodb } from "react-icons/si";
+import { SiRedux, SiJest, SiMongodb, SiNextdotjs, SiTypescript, SiExpress } from "react-icons/si";
 
 const icons = {
   FaHtml5,
@@ -34,6 +34,9 @@ const icons = {
   SiRedux,
   SiJest,
   SiMongodb,
+  SiNextdotjs,
+  SiTypescript,
+  SiExpress,
   FaSass,
 };
 
