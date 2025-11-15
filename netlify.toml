@@ -1,0 +1,30 @@
+# Configuration Netlify pour le portfolio
+
+[build]
+  # Commande de build Vite
+  command = "npm run build"
+  # Dossier de sortie
+  publish = "dist"
+
+# Configuration des fonctions serverless
+[functions]
+  # Dossier des fonctions
+  directory = "netlify/functions"
+  # Version Node.js
+  node_bundler = "esbuild"
+
+# Redirection pour le SPA (Single Page Application)
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+  force = false
+
+# Headers de sécurité
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"

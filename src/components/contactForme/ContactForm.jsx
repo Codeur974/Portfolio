@@ -17,7 +17,18 @@ function ContactForm() {
     e.preventDefault();
     setIsLoading(true);
 
-    // Envoi de 2 emails en parallèle
+    // Extraire les données du formulaire
+    const formData = {
+      name: e.target.name.value,
+      email: e.target.email.value,
+      phone: e.target.phone.value,
+      project_type: e.target.project_type.value,
+      budget: e.target.budget.value,
+      deadline: e.target.deadline.value,
+      message: e.target.message.value,
+    };
+
+    // Envoi en parallèle : 2 emails + ajout dans Notion via fonction Netlify
     Promise.all([
       // Email 1 : Pour vous (admin) avec tous les détails
       emailjs.sendForm(
@@ -32,7 +43,18 @@ function ContactForm() {
         "template_r837kdn",
         e.target,
         "GW06hD3NPpCzRdA_o"
-      )
+      ),
+      // Ajout du lead dans Notion CRM via fonction serverless Netlify
+      fetch("/.netlify/functions/add-to-notion", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      }).then((res) => {
+        if (!res.ok) throw new Error("Erreur Notion");
+        return res.json();
+      })
     ])
       .then(() => {
         e.target.reset();
@@ -41,7 +63,7 @@ function ContactForm() {
       })
       .catch((error) => {
         showNotification("Erreur lors de l'envoi. Veuillez réessayer.", "error");
-        console.error("Erreur EmailJS :", error);
+        console.error("Erreur lors de l'envoi :", error);
       })
       .finally(() => {
         setIsLoading(false);
