@@ -18,18 +18,55 @@ export const handler = async (event) => {
     // Parser les données du formulaire
     const formData = JSON.parse(event.body);
 
+    // Mapper les valeurs du formulaire aux options Notion
+    const mapBudget = (budget) => {
+      const budgetMap = {
+        "Moins de 800€": "< 1000€",
+        "800€ - 1500€": "1000–3000€",
+        "1500€ - 2500€": "1000–3000€",
+        "2500€ - 3500€": "3000–6000€",
+        "Plus de 3500€": "6000€+",
+        "À discuter": "< 1000€"
+      };
+      return budgetMap[budget] || "< 1000€";
+    };
+
+    const mapDelai = (deadline) => {
+      const delaiMap = {
+        "Urgent (moins d'1 mois)": "Urgent (-1 mois)",
+        "1 à 2 mois": "1–3 mois",
+        "2 à 3 mois": "1–3 mois",
+        "Plus de 3 mois": "+3 mois",
+        "Flexible": "+3 mois"
+      };
+      return delaiMap[deadline] || "1–3 mois";
+    };
+
+    const mapTypeProjet = (projectType) => {
+      const typeMap = {
+        "Site vitrine": "Site vitrine",
+        "E-commerce": "E-commerce",
+        "Application web sur mesure": "Web app",
+        "Refonte de site existant": "Refonte",
+        "Maintenance / Correction de bugs": "Autre",
+        "Optimisation SEO": "Autre",
+        "Autre": "Autre"
+      };
+      return typeMap[projectType] || "Autre";
+    };
+
     // Ajouter le lead dans Notion
     const response = await notion.pages.create({
       parent: {
         database_id: process.env.NOTION_DATABASE_ID,
       },
       properties: {
-        // Nom / Entreprise
-        Name: {
+        // Client / Projet (Title)
+        "Client / Projet": {
           title: [
             {
               text: {
-                content: formData.name,
+                content: `${formData.name} – ${mapTypeProjet(formData.project_type)}`,
               },
             },
           ],
@@ -40,30 +77,30 @@ export const handler = async (event) => {
         },
         // Téléphone (peut être vide)
         ...(formData.phone && {
-          Phone: {
+          Téléphone: {
             phone_number: formData.phone,
           },
         }),
         // Type de projet
         "Type de projet": {
           select: {
-            name: formData.project_type,
+            name: mapTypeProjet(formData.project_type),
           },
         },
         // Budget
         Budget: {
           select: {
-            name: formData.budget,
+            name: mapBudget(formData.budget),
           },
         },
         // Délai
-        "Délai souhaité": {
+        Délai: {
           select: {
-            name: formData.deadline,
+            name: mapDelai(formData.deadline),
           },
         },
-        // Description
-        Description: {
+        // Notes (Description du projet)
+        Notes: {
           rich_text: [
             {
               text: {
@@ -72,14 +109,20 @@ export const handler = async (event) => {
             },
           ],
         },
+        // Source
+        Source: {
+          select: {
+            name: "Formulaire site",
+          },
+        },
         // Statut (par défaut : Nouveau)
         Statut: {
           select: {
             name: "Nouveau",
           },
         },
-        // Date de contact
-        "Date de contact": {
+        // Date 1er contact
+        "Date 1er contact": {
           date: {
             start: new Date().toISOString(),
           },
