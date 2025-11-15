@@ -127,6 +127,12 @@ export const handler = async (event) => {
             start: new Date().toISOString(),
           },
         },
+        // Prochain rappel (aujourd'hui + 3 jours)
+        "Prochain rappel": {
+          date: {
+            start: new Date(Date.now() + 3 * 24 * 60 * 60 * 1000).toISOString().split('T')[0],
+          },
+        },
       },
     });
 
