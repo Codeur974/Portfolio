@@ -7,19 +7,41 @@
   <!-- Page d'accueil -->
   <url>
     <loc>https://www.codeur974.com/</loc>
-    <lastmod>2025-02-14</lastmod>
+    <lastmod>2025-11-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
-  <!-- Ajoutez d'autres pages ici si nécessaire -->
-  <!-- Exemple:
+  <!-- Services -->
   <url>
-    <loc>https://www.codeur974.com/contact</loc>
-    <lastmod>2025-02-14</lastmod>
+    <loc>https://www.codeur974.com/services</loc>
+    <lastmod>2025-11-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Mes Projets -->
+  <url>
+    <loc>https://www.codeur974.com/myproject</loc>
+    <lastmod>2025-11-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-  -->
+
+  <!-- À propos -->
+  <url>
+    <loc>https://www.codeur974.com/about</loc>
+    <lastmod>2025-11-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Formations -->
+  <url>
+    <loc>https://www.codeur974.com/formation</loc>
+    <lastmod>2025-11-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
 
 </urlset>

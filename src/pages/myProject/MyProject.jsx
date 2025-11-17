@@ -1,4 +1,5 @@
 import { useState } from "react";
+import SEO from "../../components/SEO";
 import Cards from "../../components/cards/cards";
 
 import styles from "./myproject.module.scss";
@@ -17,6 +18,12 @@ function MyProject() {
 
   return (
     <div className={styles.myproject}>
+      <SEO
+        title="Mes Projets"
+        description="Portfolio de projets web : sites vitrines, applications React, projets Next.js et e-commerce. Découvrez mes réalisations en développement frontend avec les technologies modernes. Projets réels et compétences acquises."
+        keywords="portfolio développeur web, projets React, projets Next.js, réalisations web, sites web portfolio, applications JavaScript, compétences frontend, projets développement web"
+        canonical="/myproject"
+      />
       <h1 className={styles.myproject__title}>
         {titleLines.map((line, lineIndex) => (
           <span key={`line-${lineIndex}`} className={styles.line}>

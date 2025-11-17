@@ -246,10 +246,41 @@
 }
 
 .testimonialCard {
-  background: $white;
-  padding: $spacing-lg;
-  border-radius: $radius-lg;
-  box-shadow: $shadow-sm;
+  background: linear-gradient(135deg, #ffffff 0%, rgba(247, 250, 255, 1) 100%);
+  padding: $spacing-lg+$spacing-sm;
+  border-radius: $radius-xl;
+  box-shadow:
+    0 4px 20px rgba(0, 92, 189, 0.08),
+    0 1px 3px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 92, 189, 0.08);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '"';
+    position: absolute;
+    top: -10px;
+    left: 20px;
+    font-size: 120px;
+    color: rgba(0, 92, 189, 0.05);
+    font-family: Georgia, serif;
+    line-height: 1;
+    z-index: 0;
+  }
+
+  > * {
+    position: relative;
+    z-index: 1;
+  }
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow:
+      0 12px 35px rgba(0, 92, 189, 0.12),
+      0 4px 12px rgba(0, 92, 189, 0.08);
+    border-color: rgba(0, 92, 189, 0.15);
+  }
 }
 
 .rating {
@@ -265,9 +296,14 @@
 
 .testimonialText {
   font-style: italic;
-  color: $text-secondary;
-  line-height: $line-height-normal;
+  background: linear-gradient(135deg, #5B7A9F 0%, #4A6FA5 30%, #3B5998 60%, #2C5282 85%, #1E40AF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1.8;
   margin-bottom: $spacing-md;
+  font-weight: 500;
+  font-size: $font-size-base;
 }
 
 .testimonialAuthor {
@@ -276,8 +312,12 @@
   gap: 0.25rem;
 
   strong {
-    color: $text-primary;
+    background: linear-gradient(135deg, #1E293B 0%, #334155 30%, #1E40AF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
     font-size: $font-size-lg;
+    font-weight: 700;
   }
 
   span {
@@ -286,9 +326,13 @@
   }
 
   .service {
-    color: $primary-blue;
-    font-weight: 600;
+    background: linear-gradient(135deg, #005CBD 0%, #0077ED 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 700;
     margin-top: $spacing-xs;
+    font-size: $font-size-sm;
   }
 }
 

@@ -22,12 +22,19 @@ function Header() {
       </div>
 
       {!isMenuPage && (
-        <div className={styles.headerActions}>
-          <button onClick={handleCalendlyClick} className={styles.calendlyButton}>
-            <FiCalendar className={styles.calendarIcon} />
-            <span>Prendre RDV</span>
-          </button>
-        </div>
+        <>
+          {/* Fusée */}
+          <div className={styles.shootingStarsContainer}>
+            <div className={styles.shootingStar}></div>
+          </div>
+
+          <div className={styles.headerActions}>
+            <button onClick={handleCalendlyClick} className={styles.calendlyButton}>
+              <FiCalendar className={styles.calendarIcon} />
+              <span>Prendre RDV</span>
+            </button>
+          </div>
+        </>
       )}
     </div>
   );

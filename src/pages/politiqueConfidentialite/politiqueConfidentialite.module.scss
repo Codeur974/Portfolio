@@ -1,0 +1,99 @@
+@use '../../styles/variables' as *;
+
+.legalPage {
+  min-height: 100vh;
+  padding: 4rem 0;
+  background: transparent;
+
+  @media (max-width: $breakpoint-mobile) {
+    padding: 2rem 0;
+  }
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 $spacing-lg;
+
+  @media (max-width: $breakpoint-mobile) {
+    padding: 0 $spacing-sm;
+  }
+}
+
+.title {
+  font-size: $font-size-4xl;
+  font-weight: 800;
+  margin-bottom: $spacing-xl;
+  text-align: center;
+  background: linear-gradient(135deg, #1E293B 0%, #334155 20%, #1E40AF 60%, #0077ED 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+
+  @media (max-width: $breakpoint-mobile) {
+    font-size: $font-size-3xl;
+  }
+}
+
+.section {
+  margin-bottom: $spacing-xl;
+
+  h2 {
+    font-size: $font-size-2xl;
+    font-weight: 700;
+    margin-bottom: $spacing-md;
+    color: $primary-blue;
+
+    @media (max-width: $breakpoint-mobile) {
+      font-size: $font-size-xl;
+    }
+  }
+
+  p {
+    color: $text-secondary;
+    line-height: 1.8;
+    margin-bottom: $spacing-md;
+    font-size: $font-size-base;
+
+    strong {
+      color: $text-primary;
+      font-weight: 600;
+    }
+  }
+
+  ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: $spacing-md;
+
+    li {
+      color: $text-secondary;
+      line-height: 1.8;
+      margin-bottom: $spacing-xs;
+      padding-left: $spacing-md;
+      position: relative;
+
+      &::before {
+        content: '•';
+        position: absolute;
+        left: 0;
+        color: $primary-blue;
+        font-weight: bold;
+      }
+
+      strong {
+        color: $text-primary;
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+.lastUpdate {
+  text-align: center;
+  color: $text-secondary;
+  font-size: $font-size-sm;
+  margin-top: $spacing-xxl;
+  padding-top: $spacing-lg;
+  border-top: 1px solid rgba(0, 92, 189, 0.1);
+}

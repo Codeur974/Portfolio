@@ -1,34 +1,295 @@
-.formationSection {
-  h2 {
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-bottom: 1rem;
-    color: #2c3e50;
-    border-bottom: 2px solid #3498db;
-    padding: 0.5rem;
+@use '../../styles/variables' as *;
+
+.formationPage {
+  min-height: 100vh;
+  padding-top: 20px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 $spacing-lg;
+
+  @media (max-width: $breakpoint-mobile) {
+    padding: 0 $spacing-sm;
+  }
+}
+
+// Hero Section
+.hero {
+  background: transparent;
+  color: $text-primary;
+  padding: 0 0 $spacing-xxl 0;
+  text-align: center;
+
+  @media (max-width: $breakpoint-mobile) {
+    padding: 0 0 $spacing-xl 0;
+  }
+}
+
+.heroBadge {
+  display: inline-block;
+  background: linear-gradient(135deg, rgba(0, 92, 189, 0.1), rgba(0, 119, 237, 0.15));
+  border: 2px solid rgba(0, 92, 189, 0.2);
+  color: $primary-blue;
+  padding: 0.6rem 1.5rem;
+  border-radius: 50px;
+  font-size: $font-size-sm;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  margin-bottom: $spacing-lg;
+  animation: fadeInDown 0.8s ease;
+
+  @media (max-width: $breakpoint-mobile) {
+    font-size: 0.75rem;
+    padding: 0.5rem 1.2rem;
+  }
+}
+
+.heroTitle {
+  font-size: 3.5rem;
+  margin-bottom: $spacing-md;
+  font-weight: 800;
+  line-height: 1.2;
+  color: $text-primary;
+  animation: fadeInUp 1s ease;
+
+  @media (max-width: $breakpoint-mobile) {
+    font-size: 2rem;
+  }
+}
+
+.gradientText {
+  background: linear-gradient(135deg, #005CBD 0%, #0077ED 50%, #4A9EFF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 900;
+  display: inline-block;
+}
+
+.heroSubtitle {
+  font-size: $font-size-xl;
+  max-width: 750px;
+  margin: 0 auto;
+  line-height: 1.7;
+  color: $text-secondary;
+  font-weight: 400;
+  animation: fadeInUp 1.2s ease;
+
+  strong {
+    color: $text-primary;
+    font-weight: 700;
   }
 
-  ul {
-    margin-left: 20px;
-    list-style: disc;
-    padding: 1rem;
-    box-sizing: border-box;
+  @media (max-width: $breakpoint-mobile) {
+    font-size: $font-size-base;
+  }
+}
 
-    li {
-      margin: auto;
-      max-width: 1000px;
-      font-size: 1.5rem;
-      margin-bottom: 0.75rem;
-      line-height: 1.6;
-      color: #34495e;
-      @media (max-width: 768px) {
-        font-size: 1rem;
-      }
+// Animations
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
-      h3 {
-        color: #2980b9;
-        font-weight: bold;
-      }
-    }
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// Formations Section
+.formationsSection {
+  padding: 0 0 $spacing-xxl 0;
+
+  @media (max-width: $breakpoint-mobile) {
+    padding: 0 0 $spacing-xl 0;
+  }
+}
+
+.formationsGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: $spacing-xl;
+}
+
+.formationCard {
+  background: linear-gradient(135deg, #ffffff 0%, rgba(247, 250, 255, 1) 100%);
+  padding: $spacing-xl;
+  border-radius: $radius-xl;
+  box-shadow:
+    0 4px 20px rgba(0, 92, 189, 0.08),
+    0 1px 3px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 92, 189, 0.08);
+  transition: all 0.3s ease;
+  position: relative;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow:
+      0 12px 35px rgba(0, 92, 189, 0.12),
+      0 4px 12px rgba(0, 92, 189, 0.08);
+    border-color: rgba(0, 92, 189, 0.15);
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    padding: $spacing-lg;
+  }
+}
+
+.formationHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: $spacing-md;
+}
+
+.formationIcon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, rgba(0, 92, 189, 0.1), rgba(0, 119, 237, 0.15));
+  color: #005CBD;
+  font-size: 1.8rem;
+  box-shadow: 0 4px 15px rgba(0, 92, 189, 0.15);
+}
+
+.formationType {
+  padding: 0.5rem 1rem;
+  background: linear-gradient(135deg, #005CBD, #0077ED);
+  color: $white;
+  border-radius: 20px;
+  font-size: $font-size-sm;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.formationTitle {
+  font-size: $font-size-3xl;
+  margin-bottom: $spacing-xs;
+  font-weight: 800;
+  background: linear-gradient(135deg, #1E293B 0%, #334155 20%, #1E40AF 60%, #0077ED 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+
+  @media (max-width: $breakpoint-mobile) {
+    font-size: $font-size-2xl;
+  }
+}
+
+.formationSchool {
+  font-size: $font-size-lg;
+  color: $text-secondary;
+  margin-bottom: $spacing-md;
+  font-weight: 600;
+}
+
+.formationMeta {
+  display: flex;
+  gap: $spacing-md;
+  margin-bottom: $spacing-lg;
+  flex-wrap: wrap;
+}
+
+.formationLevel,
+.formationPeriod {
+  font-size: $font-size-sm;
+  padding: 0.5rem 1rem;
+  background: rgba(0, 92, 189, 0.08);
+  border-radius: 8px;
+  font-weight: 600;
+  color: $primary-blue;
+}
+
+.skillsList {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: $spacing-sm;
+  margin-top: $spacing-md;
+}
+
+.skillItem {
+  display: flex;
+  align-items: flex-start;
+  gap: $spacing-xs;
+  font-size: $font-size-base;
+  color: $text-secondary;
+  line-height: 1.6;
+
+  span {
+    flex: 1;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    font-size: $font-size-sm;
+  }
+}
+
+.checkIcon {
+  color: #22c55e;
+  font-size: $font-size-base;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+// Learning Section
+.learningSection {
+  padding: $spacing-xxl 0;
+  background: transparent;
+  text-align: center;
+
+  @media (max-width: $breakpoint-mobile) {
+    padding: $spacing-xl 0;
+  }
+}
+
+.sectionTitle {
+  font-size: $font-size-4xl;
+  text-align: center;
+  margin-bottom: $spacing-md;
+  font-weight: 800;
+  background: linear-gradient(135deg, #1E293B 0%, #334155 20%, #1E40AF 60%, #0077ED 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: -0.5px;
+
+  @media (max-width: $breakpoint-mobile) {
+    font-size: $font-size-3xl;
+  }
+}
+
+.sectionSubtitle {
+  text-align: center;
+  font-size: $font-size-lg;
+  max-width: 750px;
+  margin: 0 auto;
+  background: linear-gradient(135deg, #5B7A9F 0%, #4A6FA5 30%, #3B5998 60%, #2C5282 85%, #1E40AF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 500;
+  line-height: 1.8;
+  font-style: italic;
+
+  @media (max-width: $breakpoint-mobile) {
+    font-size: $font-size-base;
   }
 }

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useContactForm } from "../../context/useContactForm";
+import SEO from "../../components/SEO";
 import ServiceCard from "../../components/serviceCard/ServiceCard";
 import ProcessStep from "../../components/processStep/ProcessStep";
 import ReviewForm from "../../components/reviewForm/ReviewForm";
@@ -26,6 +27,12 @@ function Services() {
 
   return (
     <div className={styles.servicesPage}>
+      <SEO
+        title="Services"
+        description="Développeur web freelance spécialisé Next.js et React. Création de sites vitrines, applications web sur mesure, e-commerce. Intervention partout en France en télétravail. Devis gratuit."
+        keywords="services développement web, création site vitrine, application web sur mesure, site e-commerce, développeur Next.js, développeur React, freelance web France, site web professionnel"
+        canonical="/services"
+      />
       {/* Hero Section */}
       <section className={styles.hero}>
         <div className={styles.container}>
