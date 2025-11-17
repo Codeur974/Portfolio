@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "title": "On discute de ton projet",
+    "description": "Appel de 20 à 30 minutes pour comprendre ton activité, ton projet, tes objectifs (image, clients, ventes) et ton budget. On valide ensemble si je suis la bonne personne pour t'accompagner.",
+    "icon": "FaComments",
+    "color": "#4CAF50"
+  },
+  {
+    "id": 2,
+    "title": "Je te propose une solution sur mesure",
+    "description": "Je t'envoie une proposition détaillée : pages prévues, fonctionnalités, délais et tarif. Tu sais exactement ce qui est inclus et comment va se dérouler le projet, sans jargon technique.",
+    "icon": "FaFileAlt",
+    "color": "#2196F3"
+  },
+  {
+    "id": 3,
+    "title": "Je conçois et je développe ton projet",
+    "description": "Je travaille sur la structure, le design et le développement du site ou de l'application. Tu reçois des aperçus réguliers pour valider l'avancement et ajuster si besoin.",
+    "icon": "FaCode",
+    "color": "#FF9800"
+  },
+  {
+    "id": 4,
+    "title": "Ton projet est en ligne, tu n'es pas seul",
+    "description": "Je m'occupe de la mise en ligne, des tests finaux et des derniers réglages. Je te montre comment utiliser ton site / app et je reste disponible pour les petites questions et évolutions.",
+    "icon": "FaRocket",
+    "color": "#9C27B0"
+  }
+]

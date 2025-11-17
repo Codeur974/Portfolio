@@ -1,11 +1,10 @@
 import styles from "./intro.module.scss";
-import Logo from "../../assets/logo.png";
 
 function Intro() {
   return (
     <div className={styles.intro}>
-      <img src={Logo} alt="logo" className={styles.logo} />
-      <h1 className={styles.intro__title}>Bienvenue sur mon portfolio</h1>
+      <img src="/images/logo.png" alt="logo Digital'tek Service" className={styles.logo} />
+      <h1 className={styles.intro__title}>Bienvenue sur Digital'tek Service</h1>
     </div>
   );
 }

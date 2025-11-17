@@ -1,0 +1,213 @@
+@use '../../styles/variables' as *;
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: $spacing-md;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.modal {
+  background: $white;
+  border-radius: $radius-xl;
+  max-width: 600px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: $spacing-xl;
+  position: relative;
+  animation: slideUp 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+
+  @media (max-width: $breakpoint-mobile) {
+    padding: $spacing-lg;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.closeBtn {
+  position: absolute;
+  top: $spacing-md;
+  right: $spacing-md;
+  background: transparent;
+  border: none;
+  font-size: $font-size-2xl;
+  color: $text-secondary;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    color: $text-primary;
+  }
+}
+
+.title {
+  font-size: $font-size-3xl;
+  margin-bottom: $spacing-xs;
+  font-weight: 800;
+  background: linear-gradient(135deg, #1E293B 0%, #334155 20%, #1E40AF 60%, #0077ED 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+
+  @media (max-width: $breakpoint-mobile) {
+    font-size: $font-size-2xl;
+  }
+}
+
+.subtitle {
+  background: linear-gradient(135deg, #5B7A9F 0%, #4A6FA5 30%, #3B5998 60%, #2C5282 85%, #1E40AF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 500;
+  margin-bottom: $spacing-lg;
+  font-style: italic;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-md;
+}
+
+.formRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: $spacing-md;
+
+  @media (max-width: $breakpoint-mobile) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  label {
+    font-weight: 600;
+    color: $text-primary;
+    font-size: $font-size-sm;
+  }
+
+  input,
+  select,
+  textarea {
+    padding: 0.75rem 1rem;
+    border: 2px solid rgba(0, 92, 189, 0.15);
+    border-radius: $radius-md;
+    font-size: $font-size-base;
+    transition: all 0.3s ease;
+    font-family: inherit;
+
+    &:focus {
+      outline: none;
+      border-color: $primary-blue;
+      box-shadow: 0 0 0 3px rgba(0, 92, 189, 0.1);
+    }
+  }
+
+  textarea {
+    resize: vertical;
+    min-height: 120px;
+  }
+
+  small {
+    color: $text-secondary;
+    font-size: 0.8rem;
+  }
+}
+
+.ratingSelector {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.star {
+  font-size: $font-size-3xl;
+  color: #E5E7EB;
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  &:hover,
+  &.active {
+    color: #FFC107;
+    transform: scale(1.1);
+  }
+}
+
+.submitBtn {
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, #005CBD, #0077ED);
+  color: $white;
+  border: none;
+  border-radius: $radius-md;
+  font-size: $font-size-base;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: $spacing-sm;
+
+  &:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 92, 189, 0.4);
+  }
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+}
+
+.successMessage {
+  padding: $spacing-md;
+  background: linear-gradient(135deg, #D1FAE5, #A7F3D0);
+  border: 2px solid #10B981;
+  border-radius: $radius-md;
+  color: #065F46;
+  font-weight: 600;
+  text-align: center;
+}
+
+.errorMessage {
+  padding: $spacing-md;
+  background: linear-gradient(135deg, #FEE2E2, #FECACA);
+  border: 2px solid #EF4444;
+  border-radius: $radius-md;
+  color: #991B1B;
+  font-weight: 600;
+  text-align: center;
+}

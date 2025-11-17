@@ -1,7 +1,5 @@
-import { FaBars } from "react-icons/fa";
 import { FiCalendar } from "react-icons/fi";
 import { Link, useLocation } from "react-router-dom";
-import logo from "../../assets/logo.png";
 import styles from "./header.module.scss";
 
 function Header() {
@@ -19,7 +17,7 @@ function Header() {
     >
       <div>
         <Link to={"/"}>
-          <img src={logo} alt="logo du site" className={styles.logo} />
+          <img src="/images/logo.png" alt="logo du site" className={styles.logo} />
         </Link>
       </div>
 
@@ -29,12 +27,6 @@ function Header() {
             <FiCalendar className={styles.calendarIcon} />
             <span>Prendre RDV</span>
           </button>
-          <div className={styles.menuToggle}>
-            <Link to="menu">
-              <span className={styles.animatedText}>Par ici le menu</span>
-              <FaBars className={styles.hamburgerIcon} />
-            </Link>
-          </div>
         </div>
       )}
     </div>

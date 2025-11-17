@@ -1,0 +1,384 @@
+@use '../../styles/variables' as *;
+
+.servicesPage {
+  min-height: 100vh;
+  padding-top: 20px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 $spacing-lg;
+
+  @media (max-width: $breakpoint-mobile) {
+    padding: 0 $spacing-sm;
+  }
+}
+
+// Hero Section
+.hero {
+  background: transparent;
+  color: $text-primary;
+  padding: 0 0 $spacing-xxl 0;
+  text-align: center;
+
+  @media (max-width: $breakpoint-mobile) {
+    padding: 0 0 $spacing-xl 0;
+  }
+}
+
+.heroBadge {
+  display: inline-block;
+  background: linear-gradient(135deg, rgba(0, 92, 189, 0.1), rgba(0, 119, 237, 0.15));
+  border: 2px solid rgba(0, 92, 189, 0.2);
+  color: $primary-blue;
+  padding: 0.6rem 1.5rem;
+  border-radius: 50px;
+  font-size: $font-size-sm;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  margin-bottom: $spacing-lg;
+  text-transform: uppercase;
+  animation: fadeInDown 0.8s ease;
+
+  @media (max-width: $breakpoint-mobile) {
+    font-size: 0.75rem;
+    padding: 0.5rem 1.2rem;
+  }
+}
+
+.heroTitle {
+  font-size: 3.5rem;
+  margin-bottom: $spacing-md;
+  font-weight: 800;
+  line-height: 1.2;
+  animation: fadeInUp 1s ease;
+
+  @media (max-width: $breakpoint-mobile) {
+    font-size: 2rem;
+  }
+}
+
+.gradientText {
+  background: linear-gradient(135deg, #005CBD 0%, #0077ED 50%, #4A9EFF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 900;
+  display: inline-block;
+}
+
+.heroSubtitle {
+  font-size: $font-size-xl;
+  max-width: 750px;
+  margin: 0 auto;
+  line-height: 1.7;
+  color: $text-secondary;
+  font-weight: 400;
+  animation: fadeInUp 1.2s ease;
+
+  strong {
+    color: $text-primary;
+    font-weight: 700;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    font-size: $font-size-base;
+  }
+}
+
+.highlightText {
+  background: linear-gradient(135deg, #005CBD 0%, #0077ED 50%, #4A9EFF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
+}
+
+// Animations
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// Services Section
+.servicesSection {
+  padding: $spacing-xxl+$spacing-sm 0;
+  background: transparent;
+
+  @media (max-width: $breakpoint-mobile) {
+    padding: $spacing-xl 0;
+  }
+}
+
+.servicesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  column-gap: $spacing-lg;
+  row-gap: $spacing-xl;
+  align-items: start;
+
+  @media (max-width: $breakpoint-mobile) {
+    grid-template-columns: 1fr;
+    gap: $spacing-xl;
+  }
+}
+
+// Process Section
+.processSection {
+  padding: 0;
+
+  @media (max-width: $breakpoint-mobile) {
+    padding: 0;
+  }
+}
+
+.sectionTitle {
+  font-size: $font-size-4xl;
+  text-align: center;
+  margin-bottom: $spacing-md;
+  font-weight: 800;
+  background: linear-gradient(135deg, #1E293B 0%, #334155 20%, #1E40AF 60%, #0077ED 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: -0.5px;
+
+  @media (max-width: $breakpoint-mobile) {
+    font-size: $font-size-3xl;
+  }
+}
+
+.sectionSubtitle {
+  text-align: center;
+  font-size: $font-size-lg;
+  margin-bottom: $spacing-xxl;
+  max-width: 650px;
+  margin-left: auto;
+  margin-right: auto;
+  background: linear-gradient(135deg, #5B7A9F 0%, #4A6FA5 30%, #3B5998 60%, #2C5282 85%, #1E40AF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 500;
+  line-height: 1.6;
+  font-style: italic;
+
+  @media (max-width: $breakpoint-mobile) {
+    font-size: $font-size-base;
+    margin-bottom: $spacing-xl;
+  }
+}
+
+.processSteps {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+// Testimonials Section
+.testimonialsSection {
+  padding: $spacing-xxl+$spacing-sm 0;
+  background: transparent;
+
+  @media (max-width: $breakpoint-mobile) {
+    padding: $spacing-xl 0;
+  }
+}
+
+.addReviewBtnWrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: $spacing-xl;
+}
+
+.addReviewBtn {
+  padding: 0.875rem 1.75rem;
+  background: linear-gradient(135deg, #005CBD, #0077ED);
+  color: $white;
+  border: none;
+  border-radius: $radius-md;
+  font-size: $font-size-base;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  white-space: nowrap;
+  box-shadow: 0 4px 15px rgba(0, 92, 189, 0.3);
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 25px rgba(0, 92, 189, 0.4);
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+.testimonialsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: $spacing-lg;
+
+  @media (max-width: $breakpoint-mobile) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.testimonialCard {
+  background: $white;
+  padding: $spacing-lg;
+  border-radius: $radius-lg;
+  box-shadow: $shadow-sm;
+}
+
+.rating {
+  display: flex;
+  gap: 0.25rem;
+  margin-bottom: $spacing-sm;
+
+  .star {
+    color: $warning;
+    font-size: $font-size-xl;
+  }
+}
+
+.testimonialText {
+  font-style: italic;
+  color: $text-secondary;
+  line-height: $line-height-normal;
+  margin-bottom: $spacing-md;
+}
+
+.testimonialAuthor {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+
+  strong {
+    color: $text-primary;
+    font-size: $font-size-lg;
+  }
+
+  span {
+    color: $text-secondary;
+    font-size: $font-size-sm;
+  }
+
+  .service {
+    color: $primary-blue;
+    font-weight: 600;
+    margin-top: $spacing-xs;
+  }
+}
+
+// CTA Section
+.ctaSection {
+  padding: $spacing-xxl+$spacing-sm 0;
+  background: transparent;
+  color: $text-primary;
+  text-align: center;
+
+  @media (max-width: $breakpoint-mobile) {
+    padding: $spacing-xl 0;
+  }
+}
+
+.ctaTitle {
+  font-size: $font-size-4xl;
+  margin-bottom: $spacing-md;
+  font-weight: 800;
+  background: linear-gradient(135deg, #1E293B 0%, #334155 20%, #1E40AF 60%, #0077ED 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: -0.5px;
+
+  @media (max-width: $breakpoint-mobile) {
+    font-size: $font-size-3xl;
+  }
+}
+
+.ctaSubtitle {
+  font-size: $font-size-xl;
+  margin-bottom: $spacing-lg+$spacing-xs;
+  background: linear-gradient(135deg, #5B7A9F 0%, #4A6FA5 30%, #3B5998 60%, #2C5282 85%, #1E40AF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 500;
+  font-style: italic;
+
+  @media (max-width: $breakpoint-mobile) {
+    font-size: $font-size-base;
+  }
+}
+
+.ctaButtons {
+  display: flex;
+  gap: $spacing-sm;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.calendlyBtn,
+.contactBtn {
+  padding: $spacing-sm $spacing-lg;
+  border-radius: $radius-md;
+  font-size: $font-size-lg;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all $transition-normal;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: $spacing-xs;
+
+  @media (max-width: $breakpoint-mobile) {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+.calendlyBtn {
+  background: $primary-blue;
+  color: $white;
+
+  &:hover {
+    background: $secondary-blue;
+    transform: translateY(-3px);
+    box-shadow: $shadow-lg;
+  }
+}
+
+.contactBtn {
+  background: transparent;
+  color: $primary-blue;
+  border: 2px solid $primary-blue;
+
+  &:hover {
+    background: $primary-blue;
+    color: $white;
+    transform: translateY(-3px);
+  }
+}

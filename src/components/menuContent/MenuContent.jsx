@@ -41,7 +41,7 @@ const icons = {
   FaSass,
 };
 
-function MenuContent() {
+function MenuContent({ onLinkClick }) {
   const skillsData = doc.find((section) => section.id === "skills")?.data || [];
 
   return (
@@ -60,16 +60,19 @@ function MenuContent() {
         })
       )}
 
-      <Link to="/">
+      <Link to="/" onClick={onLinkClick}>
         <p>Accueil</p>
       </Link>
-      <Link to="/about">
+      <Link to="/about" onClick={onLinkClick}>
         <p>À propos de moi</p>
       </Link>
-      <Link to="/myproject">
+      <Link to="/services" onClick={onLinkClick}>
+        <p>Mes Services</p>
+      </Link>
+      <Link to="/myproject" onClick={onLinkClick}>
         <p>Mes Projets</p>
       </Link>
-      <Link to="/formation">
+      <Link to="/formation" onClick={onLinkClick}>
         <p>Formations</p>
       </Link>
 
@@ -78,6 +81,7 @@ function MenuContent() {
           href="mailto:eric.sermande@gmail.com"
           target="_blank"
           rel="noopener noreferrer"
+          onClick={onLinkClick}
         >
           <FaEnvelope />
         </a>
@@ -85,6 +89,7 @@ function MenuContent() {
           href="https://github.com/Codeur974"
           target="_blank"
           rel="noopener noreferrer"
+          onClick={onLinkClick}
         >
           <FaGithub />
         </a>
@@ -92,6 +97,7 @@ function MenuContent() {
           href="https://linkedin.com/in/tonlinkedin"
           target="_blank"
           rel="noopener noreferrer"
+          onClick={onLinkClick}
         >
           <FaLinkedin />
         </a>

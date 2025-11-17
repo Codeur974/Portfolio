@@ -3,7 +3,7 @@ import Header from "../../components/header/Header";
 import Footer from "../../components/footer/Footer";
 import { useContactForm } from "../../context/useContactForm";
 import ContactForm from "../../components/contactForme/ContactForm";
-import Button from "../../components/button/Button";
+import FloatingMenu from "../../components/floatingMenu/FloatingMenu";
 import styles from "./layout.module.scss";
 
 function Layaout() {
@@ -21,7 +21,7 @@ function Layaout() {
         <Outlet />
       </main>
       {!isHomePage && <Footer className={styles.layout__footer} />}
-      <Button />
+      <FloatingMenu />
       {isContactFormOpen && <ContactForm />}
     </div>
   );

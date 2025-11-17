@@ -2,14 +2,14 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
+  padding: 5px 20px;
   box-sizing: border-box;
 
   .logo {
-    width: 200px;
+    width: 220px;
     height: auto;
     @media (max-width: 768px) {
-      width: 150px;
+      width: 160px;
     }
   }
 
@@ -57,58 +57,7 @@
     }
   }
 
-  .menuToggle {
-    display: flex;
-    align-items: center;
-
-    .animatedText {
-      display: inline-block;
-      overflow: hidden;
-      white-space: nowrap;
-      color: brown;
-      font-size: 1.2rem;
-      font-weight: bold;
-      animation: typing 2s steps(15, end), blink 1.5s step-end infinite;
-      animation-delay: 0s, 2s;
-
-      @media (max-width: 768px) {
-        display: none;
-      }
-    }
-
-    .hamburgerIcon {
-      display: none;
-      font-size: 1.5rem;
-      color: #333;
-      margin-left: 10px;
-
-      @media (max-width: 768px) {
-        display: inline-block;
-      }
-    }
-  }
   &.centeredLogo {
     justify-content: center;
-  }
-}
-
-@keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
-}
-
-@keyframes blink {
-  0% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.5;
-  }
-  100% {
-    opacity: 1;
   }
 }

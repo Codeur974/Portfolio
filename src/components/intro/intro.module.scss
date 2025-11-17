@@ -1,3 +1,5 @@
+@use '../../styles/variables' as *;
+
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -14,7 +16,7 @@
   animation: fadeIn 2s ease-in-out;
   height: 89vh;
   h1 {
-    color: #711e00;
+    color: $primary-blue;
     font-size: 3rem;
     font-weight: 700;
     margin-bottom: 20px;
@@ -26,6 +28,6 @@
 }
 .logo {
   width: 250px;
-  height: 100px;
+  height: auto;
   margin-bottom: 20px;
 }

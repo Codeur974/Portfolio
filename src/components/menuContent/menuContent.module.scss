@@ -3,7 +3,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 70vh;
+  height: 65vh;
   position: relative;
   overflow: hidden;
 
@@ -130,7 +130,7 @@
     display: flex;
     justify-content: center;
     gap: 40px;
-    margin-top: 2rem;
+    margin-top: 1rem;
 
     a {
       display: flex;
@@ -155,7 +155,7 @@
 
   p {
     margin: 5px;
-    color: brown;
+    color: #005CBD;
     font-style: italic;
     font-weight: bold;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Ombre subtile sous le texte */

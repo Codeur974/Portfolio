@@ -1,0 +1,245 @@
+@use '../../styles/variables' as *;
+
+.serviceCard {
+  position: relative;
+  background: #ffffff;
+  border-radius: $radius-xl;
+  padding: $spacing-lg;
+  padding-top: $spacing-lg + $spacing-sm;
+  box-shadow:
+    0 4px 20px rgba(0, 92, 189, 0.08),
+    0 1px 3px rgba(0, 0, 0, 0.05);
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  display: flex;
+  flex-direction: column;
+  height: 90%;
+  border: 1px solid rgba(0, 92, 189, 0.08);
+  overflow: visible;
+
+  // Effet de brillance en fond
+  &::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(0, 119, 237, 0.03) 0%, transparent 70%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  &:hover {
+    transform: translateY(-8px);
+    box-shadow:
+      0 12px 40px rgba(0, 92, 189, 0.15),
+      0 4px 12px rgba(0, 92, 189, 0.1),
+      inset 0 1px 0 rgba(255, 255, 255, 0.8);
+    border-color: rgba(0, 92, 189, 0.2);
+
+    &::before {
+      opacity: 1;
+    }
+  }
+
+  &.popular {
+    background: linear-gradient(135deg, #ffffff 0%, rgba(247, 250, 255, 1) 100%);
+    border: 2px solid $primary-blue;
+    box-shadow:
+      0 8px 30px rgba(0, 92, 189, 0.12),
+      0 2px 8px rgba(0, 92, 189, 0.08);
+
+    &:hover {
+      box-shadow:
+        0 16px 50px rgba(0, 92, 189, 0.2),
+        0 6px 16px rgba(0, 92, 189, 0.15);
+    }
+
+    .badge {
+      position: absolute;
+      top: 16px;
+      right: 20px;
+      background: linear-gradient(135deg, #005CBD, #0077ED);
+      color: $white;
+      padding: 0.5rem 1.2rem;
+      border-radius: 25px;
+      font-size: $font-size-sm;
+      font-weight: 700;
+      box-shadow: 0 4px 12px rgba(0, 92, 189, 0.3);
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      z-index: 10;
+    }
+  }
+
+  // Assurer que le contenu passe au-dessus du ::before
+  > * {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+.header {
+  text-align: center;
+  margin-bottom: $spacing-md;
+}
+
+.iconWrapper {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto $spacing-md;
+  border-radius: $radius-round;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, rgba(0, 92, 189, 0.1), rgba(0, 119, 237, 0.15));
+  box-shadow:
+    0 4px 15px rgba(0, 92, 189, 0.15),
+    inset 0 -2px 8px rgba(0, 92, 189, 0.1);
+  transition: transform 0.3s ease;
+
+  .serviceCard:hover & {
+    transform: scale(1.1) rotate(5deg);
+  }
+}
+
+.icon {
+  font-size: 2.5rem;
+  filter: drop-shadow(0 2px 4px rgba(0, 92, 189, 0.2));
+}
+
+.title {
+  font-size: $font-size-2xl;
+  margin-bottom: $spacing-sm;
+  color: $text-primary;
+  font-weight: 700;
+  background: linear-gradient(135deg, $text-primary 0%, #333 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.price {
+  font-size: $font-size-xl;
+  font-weight: 800;
+  background: linear-gradient(135deg, #005CBD 0%, #0077ED 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin: $spacing-xs 0;
+  letter-spacing: 0.5px;
+}
+
+.description {
+  background: linear-gradient(135deg, #5B7A9F 0%, #4A6FA5 30%, #3B5998 60%, #2C5282 85%, #1E40AF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1.8;
+  margin-bottom: $spacing-md;
+  flex-grow: 0;
+  font-size: $font-size-base;
+  font-weight: 500;
+  text-align: center;
+  padding: 0 $spacing-xs;
+  font-style: italic;
+}
+
+.features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 $spacing-lg 0;
+  flex-grow: 0;
+
+  li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    margin-bottom: 0.85rem;
+    font-size: $font-size-sm;
+    line-height: 1.6;
+
+    span {
+      background: linear-gradient(135deg, #475569 0%, #334155 30%, #1E3A8A 70%, #2563EB 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      font-weight: 500;
+    }
+
+    .checkIcon {
+      color: $success;
+      font-size: $font-size-base;
+      margin-top: 0.2rem;
+      flex-shrink: 0;
+    }
+  }
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: auto;
+}
+
+.learnMoreBtn {
+  padding: 0.5rem 0;
+  border: none;
+  background: transparent;
+  font-size: $font-size-sm;
+  font-weight: 600;
+  color: $primary-blue;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 1px;
+    background: $primary-blue;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+  }
+
+  &:hover {
+    color: #0077ED;
+
+    &::after {
+      width: 100%;
+    }
+
+    .arrowIcon {
+      transform: translateX(4px);
+    }
+  }
+}
+
+.arrowIcon {
+  transition: transform 0.3s ease;
+  font-size: 0.875rem;
+}
+
+@media (max-width: $breakpoint-mobile) {
+  .serviceCard {
+    padding: $spacing-md;
+  }
+
+  .title {
+    font-size: $font-size-xl;
+  }
+
+  .price {
+    font-size: $font-size-lg;
+  }
+}
