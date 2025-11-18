@@ -64,7 +64,7 @@ function MenuContent({ onLinkClick }) {
         <p>Accueil</p>
       </Link>
       <Link to="/about" onClick={onLinkClick}>
-        <p>À propos de moi</p>
+        <p style={{ whiteSpace: 'nowrap' }}>À propos de moi</p>
       </Link>
       <Link to="/services" onClick={onLinkClick}>
         <p>Mes Services</p>

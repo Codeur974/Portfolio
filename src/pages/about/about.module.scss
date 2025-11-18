@@ -55,7 +55,8 @@
   animation: fadeInUp 1s ease;
 
   @media (max-width: $breakpoint-mobile) {
-    font-size: 2rem;
+    font-size: 1.5rem;
+    margin-bottom: $spacing-md;
   }
 }
 
@@ -120,12 +121,8 @@
 
 // Story Section
 .storySection {
-  padding: $spacing-xxl 0;
+  padding: 0;
   background: transparent;
-
-  @media (max-width: $breakpoint-mobile) {
-    padding: $spacing-xl 0;
-  }
 }
 
 .storyContent {
@@ -167,13 +164,19 @@
   gap: $spacing-sm;
 
   @media (max-width: $breakpoint-mobile) {
-    font-size: $font-size-3xl;
+    font-size: $font-size-xl;
+    margin-bottom: $spacing-md;
+    gap: $spacing-xs;
   }
 }
 
 .titleIcon {
   font-size: $font-size-3xl;
   color: $primary-blue;
+
+  @media (max-width: $breakpoint-mobile) {
+    font-size: $font-size-xl;
+  }
 }
 
 .sectionSubtitle {
@@ -192,7 +195,8 @@
   font-style: italic;
 
   @media (max-width: $breakpoint-mobile) {
-    font-size: $font-size-base;
+    font-size: $font-size-sm;
+    margin-bottom: $spacing-md;
   }
 }
 
@@ -202,7 +206,7 @@
   background: transparent;
 
   @media (max-width: $breakpoint-mobile) {
-    padding: $spacing-xl 0;
+    padding: $spacing-lg 0;
   }
 }
 
@@ -215,6 +219,7 @@
 
   @media (max-width: $breakpoint-mobile) {
     grid-template-columns: 1fr;
+    gap: $spacing-md;
   }
 }
 
@@ -234,6 +239,10 @@
       0 12px 35px rgba(0, 92, 189, 0.12),
       0 4px 12px rgba(0, 92, 189, 0.08);
     border-color: rgba(0, 92, 189, 0.15);
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    padding: $spacing-md;
   }
 }
 
@@ -280,7 +289,7 @@
   background: transparent;
 
   @media (max-width: $breakpoint-mobile) {
-    padding: $spacing-xl 0;
+    padding: $spacing-lg 0;
   }
 }
 
@@ -291,6 +300,7 @@
 
   @media (max-width: $breakpoint-mobile) {
     grid-template-columns: 1fr;
+    gap: $spacing-md;
   }
 }
 
@@ -312,6 +322,10 @@
       0 4px 12px rgba(0, 92, 189, 0.08);
     border-color: rgba(0, 92, 189, 0.15);
   }
+
+  @media (max-width: $breakpoint-mobile) {
+    padding: $spacing-md;
+  }
 }
 
 .valueIcon {
@@ -326,6 +340,13 @@
   color: #005CBD;
   font-size: 2rem;
   box-shadow: 0 4px 15px rgba(0, 92, 189, 0.15);
+
+  @media (max-width: $breakpoint-mobile) {
+    width: 60px;
+    height: 60px;
+    font-size: 1.5rem;
+    margin-bottom: $spacing-sm;
+  }
 }
 
 .valueTitle {
@@ -336,6 +357,10 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+
+  @media (max-width: $breakpoint-mobile) {
+    font-size: $font-size-lg;
+  }
 }
 
 .valueDescription {
@@ -345,6 +370,10 @@
   background-clip: text;
   line-height: 1.7;
   font-weight: 500;
+
+  @media (max-width: $breakpoint-mobile) {
+    font-size: $font-size-sm;
+  }
 }
 
 // Contact Section
@@ -354,7 +383,7 @@
   text-align: center;
 
   @media (max-width: $breakpoint-mobile) {
-    padding: $spacing-xl 0;
+    padding: $spacing-lg 0;
   }
 }
 
@@ -369,6 +398,8 @@
 
   @media (max-width: $breakpoint-mobile) {
     grid-template-columns: 1fr;
+    gap: $spacing-sm;
+    margin-bottom: $spacing-md;
   }
 }
 
@@ -403,11 +434,19 @@
     font-weight: 600;
     font-size: $font-size-base;
   }
+
+  @media (max-width: $breakpoint-mobile) {
+    padding: $spacing-md;
+  }
 }
 
 .contactIcon {
   font-size: 2rem;
   color: $primary-blue;
+
+  @media (max-width: $breakpoint-mobile) {
+    font-size: 1.5rem;
+  }
 }
 
 .calendlyBtn {

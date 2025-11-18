@@ -55,7 +55,7 @@
   animation: fadeInUp 1s ease;
 
   @media (max-width: $breakpoint-mobile) {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 }
 
@@ -162,7 +162,7 @@
   letter-spacing: -0.5px;
 
   @media (max-width: $breakpoint-mobile) {
-    font-size: $font-size-3xl;
+    font-size: $font-size-xl;
   }
 }
 
@@ -194,12 +194,8 @@
 
 // Testimonials Section
 .testimonialsSection {
-  padding: $spacing-xxl+$spacing-sm 0;
+  padding: 0;
   background: transparent;
-
-  @media (max-width: $breakpoint-mobile) {
-    padding: $spacing-xl 0;
-  }
 }
 
 .addReviewBtnWrapper {
@@ -359,7 +355,7 @@
   letter-spacing: -0.5px;
 
   @media (max-width: $breakpoint-mobile) {
-    font-size: $font-size-3xl;
+    font-size: $font-size-xl;
   }
 }
 

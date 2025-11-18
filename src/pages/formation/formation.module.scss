@@ -55,7 +55,7 @@
   animation: fadeInUp 1s ease;
 
   @media (max-width: $breakpoint-mobile) {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 }
 
@@ -190,7 +190,7 @@
   background-clip: text;
 
   @media (max-width: $breakpoint-mobile) {
-    font-size: $font-size-2xl;
+    font-size: $font-size-xl;
   }
 }
 
@@ -199,6 +199,10 @@
   color: $text-secondary;
   margin-bottom: $spacing-md;
   font-weight: 600;
+
+  @media (max-width: $breakpoint-mobile) {
+    font-size: $font-size-base;
+  }
 }
 
 .formationMeta {
@@ -272,7 +276,7 @@
   letter-spacing: -0.5px;
 
   @media (max-width: $breakpoint-mobile) {
-    font-size: $font-size-3xl;
+    font-size: $font-size-xl;
   }
 }
 

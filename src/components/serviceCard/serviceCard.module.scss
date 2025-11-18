@@ -233,13 +233,27 @@
 @media (max-width: $breakpoint-mobile) {
   .serviceCard {
     padding: $spacing-md;
+    padding-bottom: $spacing-xl;
+    height: auto;
   }
 
   .title {
-    font-size: $font-size-xl;
+    font-size: $font-size-lg;
   }
 
   .price {
-    font-size: $font-size-lg;
+    font-size: $font-size-base;
+  }
+
+  .features {
+    margin-bottom: $spacing-md;
+
+    li {
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  .actions {
+    margin-top: 0;
   }
 }
