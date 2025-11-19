@@ -54,7 +54,13 @@ function Card({ itemCard }) {
     >
       <div className={styles.cardInner}>
         <div className={styles.cardFront}>
-          <img src={itemCard.cover} alt={itemCard.title} loading="lazy" />
+          <img
+            src={itemCard.cover}
+            alt={itemCard.title}
+            loading="lazy"
+            width="280"
+            height="250"
+          />
           <h3>{itemCard.title}</h3>
         </div>
 
