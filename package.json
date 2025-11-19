@@ -12,11 +12,6 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist -r https://github.com/Codeur974/Portfolio.git"
   },
-  "overrides": {
-    "react-helmet-async": {
-      "react": "^19.0.0"
-    }
-  },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
     "@notionhq/client": "^5.4.0",
