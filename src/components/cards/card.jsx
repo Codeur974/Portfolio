@@ -16,7 +16,15 @@ import {
   FaSass,
 } from "react-icons/fa";
 
-import { SiRedux, SiJest, SiMongodb, SiNextdotjs, SiTypescript, SiExpress } from "react-icons/si";
+import {
+  SiRedux,
+  SiJest,
+  SiMongodb,
+  SiNextdotjs,
+  SiTypescript,
+  SiExpress,
+  SiTailwindcss,
+} from "react-icons/si";
 
 const icons = {
   FaHtml5,
@@ -38,6 +46,7 @@ const icons = {
   SiTypescript,
   SiExpress,
   FaSass,
+  SiTailwindcss,
 };
 
 function Card({ itemCard }) {
@@ -99,7 +108,7 @@ function Card({ itemCard }) {
                 rel="noopener noreferrer"
                 className={styles.link}
               >
-                Voir le Projet
+                {itemCard.linkLabel || "Voir le Projet"}
               </a>
             )}
           </div>

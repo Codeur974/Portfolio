@@ -109,6 +109,20 @@
     "category": "Projets clients"
   },
   {
+    "id": "c77sn974",
+    "title": "Sentiers 974",
+    "cover": "/images/sentier974.webp",
+    "description": "Application mobile pour decouvrir les sentiers de La Reunion et enregistrer ses performances (randonnees, stats, suivi).",
+    "repository": "https://github.com/Codeur974/sentiers-974",
+    "link": "https://expo.dev/accounts/codeur974/projects/sentiers974/builds/63c5a476-523d-495f-bbca-449c29966a81",
+    "linkLabel": "Installer l'APK",
+    "technologies": [
+      { "name": "React Native", "icon": "FaReact", "color": "#61DAFB" },
+      { "name": "Tailwind", "icon": "SiTailwindcss", "color": "#38BDF8" }
+    ],
+    "category": "Projets clients"
+  },
+  {
     "id": "skills",
     "data": [
       {
