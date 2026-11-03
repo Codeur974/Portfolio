@@ -26,22 +26,13 @@ function HomePageContent() {
     <>
       <div className={styles.homePageContent}>
         <h1 className={styles.homePageContent__title}>
-          <span className={styles.homePageContent__outline}>
-            Hello, je suis{" "}
-          </span>
-          Eric Sermande,{" "}
-          <span className={styles.homePageContent__outline}>
-            mais on m&apos;appelle
-          </span>
-          <span> Codeur974, </span>
-          <span className={styles.homePageContent__outline}>
-            sur les réseaux sociaux.
-          </span>
+          <span className={styles.homePageContent__outline}>Je crée des </span>
+          sites web et applications{" "}
+          <span className={styles.homePageContent__outline}>qui attirent vos clients</span>
+          {" "}et font grandir votre activité.
         </h1>
         <h2 className={styles.homePageContent__description}>
-          je suis développeur web front-end, passionné par le développement web,
-          <br />
-          et toujours à la recherche de nouveaux défis.
+          Développeur web freelance à La Réunion et partout en France — je transforme votre idée en solution digitale concrète, livrée dans les délais.
         </h2>
 
         <div className={styles.homePageContent__links}>
