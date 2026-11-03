@@ -1,11 +1,11 @@
 # robots.txt for Codeur974
-# https://www.codeur974.com
+# https://codeur974.netlify.app
 
 User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://www.codeur974.com/sitemap.xml
+Sitemap: https://codeur974.netlify.app/sitemap.xml
 
 # Crawl-delay (optional, remove if not needed)
 # Crawl-delay: 10

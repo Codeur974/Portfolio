@@ -10,7 +10,7 @@ function SEO({
   ogImage,
   canonical
 }) {
-  const baseUrl = 'https://www.codeur974.com';
+  const baseUrl = 'https://codeur974.netlify.app';
   const defaultImage = `${baseUrl}/images/logo.png`;
 
   const fullTitle = title ? `${title} | Codeur974` : 'Codeur974 - Développeur Web Freelance Next.js & React | Création Sites Web France';

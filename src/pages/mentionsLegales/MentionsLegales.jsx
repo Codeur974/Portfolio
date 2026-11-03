@@ -16,7 +16,7 @@ function MentionsLegales() {
         <section className={styles.section}>
           <h2>1. Éditeur du site</h2>
           <p>
-            Le site <strong>www.codeur974.com</strong> est édité par :
+            Le site <strong>codeur974.netlify.app</strong> est édité par :
           </p>
           <ul>
             <li><strong>Nom :</strong> Eric SERMANDE</li>
